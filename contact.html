@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Us — EduGuide AI</title>
+<meta name="description" content="Get in touch with the EduGuide AI team — we'd love to hear from you." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/animations.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/landing.css" />
+<link rel="stylesheet" href="assets/css/about-contact.css" />
+</head>
+<body>
+
+<a href="#main" class="eg-skip-link">Skip to main content</a>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="eg-navbar" id="egNavbar" aria-label="Main navigation">
+  <div class="eg-container eg-navbar__inner">
+
+    <a class="eg-logo" href="index.html" aria-label="EduGuide AI home">
+      <span class="eg-logo__mark">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <defs>
+            <linearGradient id="lgContact" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#7B5CFF" />
+              <stop offset="100%" stop-color="#2EA8FF" />
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="14" fill="url(#lgContact)" />
+          <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+          <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+          <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+        </svg>
+      </span>
+      <span class="eg-logo__word">EduGuide<span class="eg-logo__ai">AI</span></span>
+    </a>
+
+    <button class="eg-navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="eg-navbar__menu" id="navMenu">
+      <ul class="eg-navbar__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#careers">Explore Careers</a></li>
+        <li><a href="index.html#how">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="is-active">Contact</a></li>
+      </ul>
+      <div class="eg-navbar__auth">
+        <a href="login.html" class="eg-btn eg-btn--ghost">Login</a>
+        <a href="register.html" class="eg-btn eg-btn--primary">Get Started <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="ac-hero ac-hero--compact">
+    <div class="ac-hero__bg" aria-hidden="true">
+      <span class="ac-hero__blob ac-hero__blob--1"></span>
+      <span class="ac-hero__blob ac-hero__blob--2"></span>
+      <span class="ac-hero__grid"></span>
+    </div>
+
+    <div class="eg-container ac-hero__inner">
+      <span class="eg-eyebrow reveal">
+        <i class="bi bi-chat-dots"></i> Contact Us
+      </span>
+      <h1 class="ac-hero__title reveal" data-delay="1">
+        We'd love to <span class="eg-gradient-text">hear from you.</span>
+      </h1>
+      <p class="ac-hero__lead reveal" data-delay="2">
+        Whether you have a question, a suggestion, or just want to say hello —
+        the EduGuide AI team reads every message.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT FORM + INFO
+       ============================================================ -->
+  <section class="ac-section">
+    <div class="eg-container">
+      <div class="ac-contact">
+
+        <!-- ---------- FORM ---------- -->
+        <div class="ac-contact__form-wrap reveal">
+          <div class="ac-contact__form-head">
+            <h2 class="ac-contact__form-title">Send us a message</h2>
+            <p class="ac-contact__form-lead">
+              Fill out the form below and we'll get back to you within 24 hours.
+            </p>
+          </div>
+
+          <form class="ac-form" id="contactForm" novalidate>
+            <div class="ac-form__row">
+              <div class="eg-field">
+                <label class="eg-label" for="contactName">Full Name <span class="req">*</span></label>
+                <div class="eg-input-group">
+                  <i class="bi bi-person eg-input-icon"></i>
+                  <input id="contactName" name="name" class="eg-input has-icon" type="text" placeholder="Your full name" required autocomplete="name" />
+                </div>
+              </div>
+
+              <div class="eg-field">
+                <label class="eg-label" for="contactEmail">Email Address <span class="req">*</span></label>
+                <div class="eg-input-group">
+                  <i class="bi bi-envelope eg-input-icon"></i>
+                  <input id="contactEmail" name="email" class="eg-input has-icon" type="email" placeholder="you@example.com" required autocomplete="email" />
+                </div>
+              </div>
+            </div>
+
+            <div class="eg-field">
+              <label class="eg-label" for="contactSubject">Subject <span class="req">*</span></label>
+              <select id="contactSubject" name="subject" class="eg-select" required>
+                <option value="" disabled selected>Choose a topic</option>
+                <option value="general">General enquiry</option>
+                <option value="support">Technical support</option>
+                <option value="feedback">Feedback &amp; suggestions</option>
+                <option value="schools">Schools &amp; counsellors</option>
+                <option value="partnership">Partnership opportunities</option>
+                <option value="press">Press &amp; media</option>
+              </select>
+            </div>
+
+            <div class="eg-field">
+              <label class="eg-label" for="contactMessage">Message <span class="req">*</span></label>
+              <textarea id="contactMessage" name="message" class="eg-textarea" rows="6" placeholder="Tell us how we can help…" required maxlength="1000"></textarea>
+              <span class="eg-help">
+                <span id="charCount">0</span> / 1000 characters
+              </span>
+            </div>
+
+            <div class="ac-form__actions">
+              <label class="eg-check">
+                <input type="checkbox" id="contactConsent" required />
+                <span class="eg-check__box"><i class="bi bi-check"></i></span>
+                <span>I agree to be contacted about my enquiry.</span>
+              </label>
+              <button type="submit" class="eg-btn eg-btn--primary eg-btn--lg" id="contactSubmitBtn">
+                Send Message <i class="bi bi-send"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- ---------- SUCCESS STATE ---------- -->
+          <div class="ac-form-success" id="contactSuccess" hidden>
+            <div class="ac-form-success__icon">
+              <i class="bi bi-check2-circle"></i>
+            </div>
+            <h2 class="ac-form-success__title">Message sent!</h2>
+            <p class="ac-form-success__text">
+              Thank you for reaching out. We've received your message and will reply to
+              <strong id="contactSuccessEmail">your email</strong> within 24 hours.
+            </p>
+            <button class="eg-btn eg-btn--outline" id="sendAnotherBtn">
+              <i class="bi bi-arrow-counterclockwise"></i> Send another message
+            </button>
+          </div>
+        </div>
+
+        <!-- ---------- INFO ---------- -->
+        <aside class="ac-contact__info reveal" data-delay="2">
+
+          <div class="ac-info-card">
+            <h3 class="ac-info-card__title">Contact Information</h3>
+
+            <ul class="ac-info-list">
+              <li>
+                <span class="ac-info-list__icon ac-info-list__icon--purple"><i class="bi bi-envelope"></i></span>
+                <div>
+                  <span class="ac-info-list__label">Email</span>
+                  <a href="mailto:hello@eduguide.ai" class="ac-info-list__value">hello@eduguide.ai</a>
+                </div>
+              </li>
+              <li>
+                <span class="ac-info-list__icon ac-info-list__icon--sky"><i class="bi bi-telephone"></i></span>
+                <div>
+                  <span class="ac-info-list__label">Phone</span>
+                  <a href="tel:+2348000000000" class="ac-info-list__value">+234 800 000 0000</a>
+                </div>
+              </li>
+              <li>
+                <span class="ac-info-list__icon ac-info-list__icon--success"><i class="bi bi-geo-alt"></i></span>
+                <div>
+                  <span class="ac-info-list__label">Office</span>
+                  <span class="ac-info-list__value">14 Innovation Way, Yaba<br />Lagos, Nigeria</span>
+                </div>
+              </li>
+              <li>
+                <span class="ac-info-list__icon ac-info-list__icon--warning"><i class="bi bi-clock"></i></span>
+                <div>
+                  <span class="ac-info-list__label">Hours</span>
+                  <span class="ac-info-list__value">Mon – Fri · 9:00 – 18:00 WAT</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="ac-info-card">
+            <h3 class="ac-info-card__title">Follow Us</h3>
+            <p class="ac-info-card__text">Stay updated on new features, career tips &amp; student stories.</p>
+            <div class="ac-social">
+              <a href="#" class="ac-social__link ac-social__link--twitter" aria-label="Twitter">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+              <a href="#" class="ac-social__link ac-social__link--linkedin" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="#" class="ac-social__link ac-social__link--instagram" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="ac-social__link ac-social__link--youtube" aria-label="YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="ac-info-card ac-info-card--faq">
+            <div class="ac-info-card__faq-icon"><i class="bi bi-question-circle"></i></div>
+            <h3 class="ac-info-card__title">Looking for quick answers?</h3>
+            <p class="ac-info-card__text">
+              Many common questions are answered in our FAQ on the home page.
+            </p>
+            <a href="index.html#faq" class="eg-btn eg-btn--light eg-btn--sm eg-btn--block">
+              <i class="bi bi-arrow-right"></i> View FAQ
+            </a>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA
+       ============================================================ -->
+  <section class="eg-cta">
+    <div class="eg-cta__bg" aria-hidden="true">
+      <span class="eg-cta__blob eg-cta__blob--1"></span>
+      <span class="eg-cta__blob eg-cta__blob--2"></span>
+    </div>
+    <div class="eg-container eg-cta__inner reveal">
+      <span class="eg-eyebrow eg-eyebrow--light"><i class="bi bi-rocket-takeoff"></i> Ready to Begin?</span>
+      <h2 class="eg-cta__title">Don't wait for graduation to plan your future.</h2>
+      <p class="eg-cta__lead">
+        Start your career assessment today and unlock personalised recommendations in 12 minutes.
+      </p>
+      <div class="eg-cta__actions">
+        <a href="register.html" class="eg-btn eg-btn--light eg-btn--lg">
+          <i class="bi bi-person-plus"></i> Get Started Free
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="eg-footer">
+  <div class="eg-container">
+    <div class="row g-4 eg-footer__top">
+      <div class="col-lg-4">
+        <a class="eg-logo eg-logo--footer" href="index.html">
+          <span class="eg-logo__mark">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <defs>
+                <linearGradient id="lgFootContact" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#7B5CFF" />
+                  <stop offset="100%" stop-color="#2EA8FF" />
+                </linearGradient>
+              </defs>
+              <rect width="48" height="48" rx="14" fill="url(#lgFootContact)" />
+              <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+              <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                    fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+              <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+            </svg>
+          </span>
+          <span class="eg-logo__word eg-logo__word--light">EduGuide<span class="eg-logo__ai">AI</span></span>
+        </a>
+        <p class="eg-footer__tagline">
+          Empowering students to make informed decisions about their education and future.
+        </p>
+        <div class="eg-footer__social">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Platform</h4>
+        <ul class="eg-footer__links">
+          <li><a href="index.html#careers">Explore Careers</a></li>
+          <li><a href="register.html">Career Assessment</a></li>
+          <li><a href="register.html">Learning Roadmaps</a></li>
+          <li><a href="register.html">Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Company</h4>
+        <ul class="eg-footer__links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Support</h4>
+        <ul class="eg-footer__links">
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Contact</h4>
+        <ul class="eg-footer__links eg-footer__links--info">
+          <li><i class="bi bi-envelope"></i> hello@eduguide.ai</li>
+          <li><i class="bi bi-telephone"></i> +234 8148797462</li>
+          <li><i class="bi bi-geo-alt"></i> Keffi, Nigeria</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="eg-footer__bottom">
+      <p>© 2025 EduGuide AI. All rights reserved.</p>
+      <p>Made with <i class="bi bi-heart-fill"></i> for students across Africa.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="eg-back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<div class="eg-toasts" id="egToasts" aria-live="polite" aria-atomic="true"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/landing.js"></script>
+<script src="assets/js/about-contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Career Assessment — EduGuide AI</title>
+<meta name="description" content="Discover the career that fits you with EduGuide AI's personalised career assessment." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/animations.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/dashboard-shell.css" />
+<link rel="stylesheet" href="assets/css/assessment.css" />
+</head>
+<body class="assess-body">
+
+<a href="#assessMain" class="eg-skip-link">Skip to assessment</a>
+
+<!-- ============================================================
+     TOPBAR
+     ============================================================ -->
+<header class="assess-topbar">
+  <div class="assess-topbar__inner">
+
+    <a href="dashboard.html" class="eg-logo" aria-label="EduGuide AI home">
+      <span class="eg-logo__mark">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <defs>
+            <linearGradient id="lgAssess" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#7B5CFF" />
+              <stop offset="100%" stop-color="#2EA8FF" />
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="14" fill="url(#lgAssess)" />
+          <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+          <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+          <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+        </svg>
+      </span>
+      <span class="eg-logo__word">EduGuide<span class="eg-logo__ai">AI</span></span>
+    </a>
+
+    <div class="assess-topbar__center">
+      <span class="assess-topbar__title">Career Assessment</span>
+      <span class="assess-topbar__status" id="topStatus">Not started</span>
+    </div>
+
+    <div class="assess-topbar__right">
+      <button class="eg-btn eg-btn--ghost eg-btn--sm" id="exitBtn" aria-label="Save and exit">
+        <i class="bi bi-box-arrow-right"></i>
+        <span class="d-none d-sm-inline">Save &amp; exit</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="assess-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Assessment progress" id="progressWrap">
+    <div class="assess-progress__bar" id="progressBar" style="width:0%"></div>
+  </div>
+</header>
+
+<main class="assess-main" id="assessMain">
+
+  <!-- ============================================================
+       SCREEN 1 — WELCOME
+       ============================================================ -->
+  <section class="assess-screen is-active" data-screen="welcome">
+    <div class="assess-welcome">
+      <div class="assess-welcome__art" aria-hidden="true">
+        <div class="assess-welcome__glow"></div>
+        <div class="assess-welcome__orb">
+          <i class="bi bi-compass"></i>
+        </div>
+        <div class="assess-welcome__card assess-welcome__card--1">
+          <span class="assess-welcome__card-icon assess-welcome__card-icon--purple"><i class="bi bi-brain"></i></span>
+          <div>
+            <span class="assess-welcome__card-label">Interests</span>
+            <span class="assess-welcome__card-value">3 sections</span>
+          </div>
+        </div>
+        <div class="assess-welcome__card assess-welcome__card--2">
+          <span class="assess-welcome__card-icon assess-welcome__card-icon--sky"><i class="bi bi-graph-up"></i></span>
+          <div>
+            <span class="assess-welcome__card-label">Skills</span>
+            <span class="assess-welcome__card-value">2 sections</span>
+          </div>
+        </div>
+        <div class="assess-welcome__card assess-welcome__card--3">
+          <span class="assess-welcome__card-icon assess-welcome__card-icon--success"><i class="bi bi-check2-circle"></i></span>
+          <div>
+            <span class="assess-welcome__card-label">Results</span>
+            <span class="assess-welcome__card-value">Instant</span>
+          </div>
+        </div>
+        <span class="assess-welcome__spark" style="--x:10%;--y:15%">✦</span>
+        <span class="assess-welcome__spark" style="--x:88%;--y:70%;animation-delay:.8s">✦</span>
+      </div>
+
+      <div class="assess-welcome__content">
+        <span class="eg-eyebrow"><i class="bi bi-stars"></i> Step 2 of your journey</span>
+        <h1 class="assess-welcome__title">
+          Discover the career that <span class="eg-gradient-text">fits you</span>.
+        </h1>
+        <p class="assess-welcome__lead">
+          20 carefully designed questions across 8 dimensions — interests, skills, personality,
+          academic strengths and aspirations. Get a personalised career match in about 12 minutes.
+        </p>
+
+        <div class="assess-welcome__stats">
+          <div>
+            <strong>20</strong>
+            <span>Questions</span>
+          </div>
+          <div>
+            <strong>8</strong>
+            <span>Sections</span>
+          </div>
+          <div>
+            <strong>~12</strong>
+            <span>Minutes</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Free</span>
+          </div>
+        </div>
+
+        <div class="assess-welcome__actions">
+          <button class="eg-btn eg-btn--primary eg-btn--lg" data-goto="instructions">
+            Start Assessment <i class="bi bi-arrow-right"></i>
+          </button>
+          <button class="eg-btn eg-btn--ghost eg-btn--lg" id="resumeBtn" hidden>
+            <i class="bi bi-play-circle"></i> Resume where I left off
+          </button>
+        </div>
+
+        <p class="assess-welcome__hint">
+          <i class="bi bi-info-circle"></i>
+          You can pause at any time — your answers are saved automatically.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCREEN 2 — INSTRUCTIONS
+       ============================================================ -->
+  <section class="assess-screen" data-screen="instructions">
+    <div class="assess-instructions">
+
+      <header class="assess-instructions__head">
+        <span class="eg-eyebrow"><i class="bi bi-clipboard2-check"></i> Before we begin</span>
+        <h2>How this assessment works</h2>
+        <p>There are no right or wrong answers. Choose what <strong>genuinely feels true</strong> for you — not what sounds most impressive.</p>
+      </header>
+
+      <ul class="assess-rules">
+        <li class="assess-rule">
+          <span class="assess-rule__icon assess-rule__icon--purple"><i class="bi bi-lightbulb"></i></span>
+          <div>
+            <h3>Be honest</h3>
+            <p>Your recommendations are only as accurate as your answers. Pick what feels most natural.</p>
+          </div>
+        </li>
+        <li class="assess-rule">
+          <span class="assess-rule__icon assess-rule__icon--sky"><i class="bi bi-clock-history"></i></span>
+          <div>
+            <h3>Take your time</h3>
+            <p>Don't overthink — your first instinct is usually the most accurate. There's no timer.</p>
+          </div>
+        </li>
+        <li class="assess-rule">
+          <span class="assess-rule__icon assess-rule__icon--success"><i class="bi bi-arrow-repeat"></i></span>
+          <div>
+            <h3>You can change answers</h3>
+            <p>Use <strong>Previous</strong> to revisit any question before submitting.</p>
+          </div>
+        </li>
+        <li class="assess-rule">
+          <span class="assess-rule__icon assess-rule__icon--warning"><i class="bi bi-shield-check"></i></span>
+          <div>
+            <h3>Privacy first</h3>
+            <p>Your answers are private and only used to generate your recommendations.</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="assess-shortcuts">
+        <p class="assess-shortcuts__title"><i class="bi bi-keyboard"></i> Keyboard shortcuts</p>
+        <div class="assess-shortcuts__grid">
+          <span><kbd>1</kbd>–<kbd>5</kbd> Select an option</span>
+          <span><kbd>←</kbd> <kbd>→</kbd> Navigate questions</span>
+          <span><kbd>Enter</kbd> Continue</span>
+          <span><kbd>Esc</kbd> Pause &amp; exit</span>
+        </div>
+      </div>
+
+      <div class="assess-instructions__actions">
+        <button class="eg-btn eg-btn--ghost" data-goto="welcome">
+          <i class="bi bi-arrow-left"></i> Back
+        </button>
+        <button class="eg-btn eg-btn--primary eg-btn--lg" data-goto="question" id="beginBtn">
+          Begin Assessment <i class="bi bi-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCREEN 3 — QUESTION
+       ============================================================ -->
+  <section class="assess-screen" data-screen="question">
+    <div class="assess-qwrap">
+
+      <!-- Section transition toast -->
+      <div class="assess-section-toast" id="sectionToast" aria-live="polite">
+        <span class="assess-section-toast__icon"><i class="bi bi-check2-circle"></i></span>
+        <span class="assess-section-toast__text" id="sectionToastText">Section complete</span>
+      </div>
+
+      <header class="assess-qheader">
+        <div class="assess-qheader__left">
+          <span class="assess-qheader__section" id="sectionLabel">Personal Interests</span>
+          <span class="assess-qheader__count" id="questionCount">Question 1 of 20</span>
+        </div>
+        <div class="assess-qheader__right">
+          <span class="assess-qheader__icon" id="sectionIcon"><i class="bi bi-heart"></i></span>
+        </div>
+      </header>
+
+      <h2 class="assess-question" id="questionText">
+        Which activities do you enjoy most in your free time?
+      </h2>
+
+      <div class="assess-options" id="optionsContainer" role="radiogroup" aria-labelledby="questionText">
+        <!-- Populated by JS -->
+      </div>
+
+      <nav class="assess-nav">
+        <button class="eg-btn eg-btn--ghost" id="prevBtn" disabled>
+          <i class="bi bi-arrow-left"></i> Previous
+        </button>
+        <div class="assess-nav__hint" id="navHint">
+          Select an option to continue
+        </div>
+        <button class="eg-btn eg-btn--primary" id="nextBtn" disabled>
+          Next <i class="bi bi-arrow-right"></i>
+        </button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCREEN 4 — COMPLETION
+       ============================================================ -->
+  <section class="assess-screen" data-screen="completion">
+    <div class="assess-complete">
+
+      <div class="assess-complete__icon">
+        <i class="bi bi-check2-circle"></i>
+      </div>
+
+      <span class="eg-eyebrow"><i class="bi bi-stars"></i> Assessment complete</span>
+      <h1 class="assess-complete__title">Well done, Amara!</h1>
+      <p class="assess-complete__lead">
+        You answered all 20 questions. Here's a preview of your <strong>top career matches</strong>
+        based on your unique profile.
+      </p>
+
+      <div class="assess-results" id="resultsPreview">
+        <article class="assess-result">
+          <span class="assess-result__match">94%</span>
+          <span class="assess-result__icon assess-result__icon--purple"><i class="bi bi-code-slash"></i></span>
+          <h3 class="assess-result__title">Software Engineer</h3>
+          <p class="assess-result__cat">Technology</p>
+        </article>
+
+        <article class="assess-result">
+          <span class="assess-result__match">89%</span>
+          <span class="assess-result__icon assess-result__icon--sky"><i class="bi bi-graph-up"></i></span>
+          <h3 class="assess-result__title">Data Scientist</h3>
+          <p class="assess-result__cat">Technology</p>
+        </article>
+
+        <article class="assess-result">
+          <span class="assess-result__match">84%</span>
+          <span class="assess-result__icon assess-result__icon--success"><i class="bi bi-cpu"></i></span>
+          <h3 class="assess-result__title">AI Engineer</h3>
+          <p class="assess-result__cat">Technology</p>
+        </article>
+      </div>
+
+      <p class="assess-complete__note">
+        <i class="bi bi-info-circle"></i>
+        9 more careers matched your profile. View the full list to explore.
+      </p>
+
+      <div class="assess-complete__actions">
+        <a href="recommendations.html" class="eg-btn eg-btn--primary eg-btn--lg">
+          View full recommendations <i class="bi bi-arrow-right"></i>
+        </a>
+        <a href="dashboard.html" class="eg-btn eg-btn--ghost eg-btn--lg">
+          <i class="bi bi-grid-1x2"></i> Back to dashboard
+        </a>
+      </div>
+
+      <button class="assess-complete__retake" id="retakeBtn">
+        <i class="bi bi-arrow-counterclockwise"></i> Retake assessment
+      </button>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     EXIT CONFIRMATION MODAL
+     ============================================================ -->
+<div class="eg-modal" id="exitModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="exitTitle">
+  <div class="eg-modal__backdrop" data-eg-modal-close></div>
+  <div class="eg-modal__dialog eg-modal__dialog--center">
+    <div class="eg-modal__body text-center">
+      <div class="assess-exit-icon">
+        <i class="bi bi-pause-circle"></i>
+      </div>
+      <h3 class="assess-exit-title" id="exitTitle">Pause this assessment?</h3>
+      <p class="assess-exit-text">
+        Your progress is saved automatically. You can pick up exactly where you left off
+        next time you visit your dashboard.
+      </p>
+      <div class="assess-exit-actions">
+        <button class="eg-btn eg-btn--ghost" data-eg-modal-close>Keep going</button>
+        <a href="dashboard.html" class="eg-btn eg-btn--primary">
+          <i class="bi bi-box-arrow-right"></i> Save &amp; exit
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="eg-toasts" id="egToasts" aria-live="polite" aria-atomic="true"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/assessment.js"></script>
+</body>
+</html>

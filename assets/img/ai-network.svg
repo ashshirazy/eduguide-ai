@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" class="ai-network-icon">
+  <!-- Neural Link Pathing -->
+  <path d="M12 3v3m0 12v3M3 12h3m12 0h3" stroke-opacity="0.4" />
+  <path d="M5.636 5.636l2.122 2.122m8.484 8.484l2.122 2.122M5.636 18.364l2.122-2.122m8.484-8.484l2.122-2.122" stroke-opacity="0.3" />
+  
+  <!-- Outer Circuit Polygon -->
+  <path d="M12 6l5.196 3v6L12 18l-5.196-3V9z" stroke-opacity="0.6" stroke-dasharray="2 2" />
+  
+  <!-- Network Nodes -->
+  <circle cx="12" cy="3" r="1.5" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="21" r="1.5" fill="currentColor" stroke="none" />
+  <circle cx="3" cy="12" r="1.5" fill="currentColor" stroke="none" />
+  <circle cx="21" cy="12" r="1.5" fill="currentColor" stroke="none" />
+  <circle cx="6.804" cy="9" r="1.25" fill="currentColor" stroke="none" />
+  <circle cx="17.196" cy="9" r="1.25" fill="currentColor" stroke="none" />
+  <circle cx="17.196" cy="15" r="1.25" fill="currentColor" stroke="none" />
+  <circle cx="6.804" cy="15" r="1.25" fill="currentColor" stroke="none" />
+  
+  <!-- Central AI Core -->
+  <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
+</svg>

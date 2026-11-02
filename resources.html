@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Learning Resources — EduGuide AI</title>
+<meta name="description" content="Curated learning resources for students: articles, videos, books, courses, scholarships, certifications and skill development." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/animations.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/dashboard-shell.css" />
+<link rel="stylesheet" href="assets/css/resources.css" />
+</head>
+<body class="dash-body">
+
+<a href="#resContent" class="eg-skip-link">Skip to resources</a>
+
+<div class="dash-sidebar__backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="dash-layout">
+
+  <!-- ============================================================
+       SIDEBAR (Resources active)
+       ============================================================ -->
+  <aside class="dash-sidebar" id="dashSidebar" aria-label="Main navigation">
+    <div class="dash-sidebar__head">
+      <a class="eg-logo" href="index.html" aria-label="EduGuide AI home">
+        <span class="eg-logo__mark">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <defs>
+              <linearGradient id="lgRes" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#7B5CFF" />
+                <stop offset="100%" stop-color="#2EA8FF" />
+              </linearGradient>
+            </defs>
+            <rect width="48" height="48" rx="14" fill="url(#lgRes)" />
+            <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+            <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                  fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+            <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+          </svg>
+        </span>
+        <span class="eg-logo__word">EduGuide<span class="eg-logo__ai">AI</span></span>
+      </a>
+      <button class="dash-sidebar__close" id="sidebarClose" aria-label="Close menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <nav class="dash-nav" aria-label="Primary">
+      <p class="dash-nav__heading">Main</p>
+      <a href="dashboard.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-grid-1x2"></i></span>
+        <span class="dash-nav__label">Overview</span>
+      </a>
+      <a href="profile.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-person"></i></span>
+        <span class="dash-nav__label">My Profile</span>
+      </a>
+      <a href="assessment.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-clipboard2-pulse"></i></span>
+        <span class="dash-nav__label">Career Assessment</span>
+        <span class="dash-nav__badge">100%</span>
+      </a>
+      <a href="recommendations.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-stars"></i></span>
+        <span class="dash-nav__label">Recommendations</span>
+        <span class="dash-nav__badge dash-nav__badge--accent">12</span>
+      </a>
+
+      <p class="dash-nav__heading">Explore</p>
+      <a href="explore.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-compass"></i></span>
+        <span class="dash-nav__label">Explore Careers</span>
+      </a>
+      <a href="saved.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-bookmark"></i></span>
+        <span class="dash-nav__label">Saved Careers</span>
+      </a>
+      <a href="roadmap.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-signpost-split"></i></span>
+        <span class="dash-nav__label">Learning Roadmap</span>
+      </a>
+      <a href="resources.html" class="dash-nav__item is-active">
+        <span class="dash-nav__icon"><i class="bi bi-collection-play"></i></span>
+        <span class="dash-nav__label">Resources</span>
+      </a>
+
+      <p class="dash-nav__heading">Account</p>
+      <a href="settings.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-gear"></i></span>
+        <span class="dash-nav__label">Settings</span>
+      </a>
+      <a href="login.html" class="dash-nav__item dash-nav__item--danger">
+        <span class="dash-nav__icon"><i class="bi bi-box-arrow-right"></i></span>
+        <span class="dash-nav__label">Logout</span>
+      </a>
+    </nav>
+
+    <div class="dash-sidebar__promo">
+      <div class="dash-sidebar__promo-icon"><i class="bi bi-rocket-takeoff"></i></div>
+      <p class="dash-sidebar__promo-title">Unlock Premium</p>
+      <p class="dash-sidebar__promo-text">Mentor sessions, certifications &amp; more.</p>
+      <button class="eg-btn eg-btn--light eg-btn--sm eg-btn--block" data-eg-toast="Premium upgrade coming soon ✨">
+        Upgrade
+      </button>
+    </div>
+
+    <div class="dash-user">
+      <span class="dash-avatar dash-avatar--lg" style="--c:#7B5CFF">AO</span>
+      <div class="dash-user__info">
+        <span class="dash-user__name">Amara Okafor</span>
+        <span class="dash-user__role">Undergraduate · 300L</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <div class="dash-main">
+
+    <!-- ---------- TOPBAR ---------- -->
+    <header class="dash-topbar">
+      <div class="dash-topbar__left">
+        <button class="dash-topbar__menu" id="sidebarToggle" aria-label="Open menu" aria-controls="dashSidebar" aria-expanded="false">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="dash-topbar__search">
+          <i class="bi bi-search"></i>
+          <input type="search" id="topSearch" placeholder="Search careers, skills, resources…" aria-label="Search" />
+          <kbd class="dash-topbar__kbd">⌘K</kbd>
+        </div>
+      </div>
+
+      <div class="dash-topbar__right">
+        <button class="dash-topbar__icon-btn d-none d-sm-flex" data-eg-toast="You're all caught up on messages ✉️" aria-label="Messages">
+          <i class="bi bi-chat-dots"></i>
+        </button>
+        <div class="dash-dropdown" data-eg-dd>
+          <button class="dash-topbar__icon-btn dash-topbar__icon-btn--notify" data-eg-dd-toggle aria-label="Notifications">
+            <i class="bi bi-bell"></i>
+            <span class="dash-topbar__dot"></span>
+          </button>
+          <div class="dash-dropdown__menu dash-dropdown__menu--wide">
+            <div class="dash-dropdown__head">
+              <strong>Notifications</strong>
+              <button class="dash-dropdown__mark" data-eg-toast="Marked all as read">Mark all read</button>
+            </div>
+            <div class="dash-notif">
+              <span class="dash-notif__icon dash-notif__icon--purple"><i class="bi bi-collection-play"></i></span>
+              <div>
+                <p class="dash-notif__title">12 new learning resources added</p>
+                <p class="dash-notif__time">2 hours ago</p>
+              </div>
+            </div>
+            <a href="#" class="dash-dropdown__footer">View all notifications</a>
+          </div>
+        </div>
+        <div class="dash-dropdown" data-eg-dd>
+          <button class="dash-topbar__profile" data-eg-dd-toggle aria-label="Profile menu">
+            <span class="dash-avatar" style="--c:#7B5CFF">AO</span>
+            <span class="dash-topbar__profile-name d-none d-md-inline">Amara O.</span>
+            <i class="bi bi-chevron-down d-none d-md-inline"></i>
+          </button>
+          <div class="dash-dropdown__menu">
+            <div class="dash-dropdown__head dash-dropdown__head--profile">
+              <span class="dash-avatar dash-avatar--lg" style="--c:#7B5CFF">AO</span>
+              <div>
+                <p class="dash-dropdown__name">Amara Okafor</p>
+                <p class="dash-dropdown__email">amara@school.edu</p>
+              </div>
+            </div>
+            <a href="profile.html" class="dash-dropdown__item"><i class="bi bi-person"></i> My Profile</a>
+            <a href="settings.html" class="dash-dropdown__item"><i class="bi bi-gear"></i> Settings</a>
+            <a href="saved.html" class="dash-dropdown__item"><i class="bi bi-bookmark"></i> Saved Careers</a>
+            <div class="dash-dropdown__sep"></div>
+            <a href="login.html" class="dash-dropdown__item dash-dropdown__item--danger"><i class="bi bi-box-arrow-right"></i> Sign Out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ---------- CONTENT ---------- -->
+    <main class="dash-content" id="resContent">
+
+      <!-- ============ HERO ============ -->
+      <section class="res-hero reveal">
+        <div class="res-hero__bg" aria-hidden="true">
+          <span class="res-hero__blob res-hero__blob--1"></span>
+          <span class="res-hero__blob res-hero__blob--2"></span>
+          <span class="res-hero__grid"></span>
+        </div>
+
+        <div class="res-hero__inner">
+          <span class="eg-eyebrow eg-eyebrow--light">
+            <i class="bi bi-collection-play"></i> Resource Centre
+          </span>
+          <h1 class="res-hero__title">Everything you need to learn, grow and get ahead.</h1>
+          <p class="res-hero__lead">
+            Curated articles, videos, books, courses, scholarships and certifications —
+            all chosen for students who are serious about their future.
+          </p>
+
+          <form class="res-search" id="resSearchForm" role="search" autocomplete="off">
+            <div class="res-search__wrap">
+              <i class="bi bi-search res-search__icon"></i>
+              <input type="search" id="resSearch"
+                     class="res-search__input"
+                     placeholder="Search 24+ resources by title, provider or topic…"
+                     aria-label="Search resources" />
+              <button type="button" class="res-search__clear" id="resSearchClear" hidden aria-label="Clear search">
+                <i class="bi bi-x-lg"></i>
+              </button>
+              <button type="submit" class="res-search__submit">Search</button>
+            </div>
+            <div class="res-search__hints">
+              <span>Try:</span>
+              <button type="button" class="res-search__hint" data-hint="python">Python</button>
+              <button type="button" class="res-search__hint" data-hint="scholarship">Scholarship</button>
+              <button type="button" class="res-search__hint" data-hint="design">Design</button>
+              <button type="button" class="res-search__hint" data-hint="ielts">IELTS</button>
+            </div>
+          </form>
+
+          <div class="res-hero__stats">
+            <div><strong>24</strong><span>Resources</span></div>
+            <div><strong>7</strong><span>Categories</span></div>
+            <div><strong>18</strong><span>Free</span></div>
+            <div><strong>12</strong><span>Saved by you</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CATEGORY TILES ============ -->
+      <section class="res-categories reveal">
+        <header class="res-categories__head">
+          <div>
+            <h2 class="res-categories__title">Browse by category</h2>
+            <p class="res-categories__sub">7 categories · 24+ curated resources</p>
+          </div>
+          <button class="res-categories__reset" id="resetCategory" hidden>
+            <i class="bi bi-arrow-counterclockwise"></i> Reset
+          </button>
+        </header>
+
+        <div class="res-category-grid" id="categoryGrid">
+          <!-- Injected by JS -->
+        </div>
+      </section>
+
+      <!-- ============ CONTROLS ============ -->
+      <section class="res-controls reveal">
+        <div class="res-controls__left">
+          <h2 class="res-controls__title" id="resResultsTitle">All resources</h2>
+          <span class="res-controls__count" id="resResultsCount">24 resources</span>
+        </div>
+
+        <div class="res-controls__right">
+          <!-- Level pills -->
+          <div class="res-filter-pills" role="group" aria-label="Filter by level">
+            <button class="res-pill is-active" data-level="all">All levels</button>
+            <button class="res-pill" data-level="beginner">Beginner</button>
+            <button class="res-pill" data-level="intermediate">Intermediate</button>
+            <button class="res-pill" data-level="advanced">Advanced</button>
+          </div>
+
+          <!-- Cost toggle -->
+          <div class="res-filter-toggle" role="group" aria-label="Filter by cost">
+            <button class="res-toggle is-active" data-cost="all">All</button>
+            <button class="res-toggle" data-cost="free">Free</button>
+            <button class="res-toggle" data-cost="paid">Paid</button>
+          </div>
+
+          <!-- Sort dropdown -->
+          <div class="dash-dropdown" data-eg-dd>
+            <button class="eg-btn eg-btn--ghost eg-btn--sm" data-eg-dd-toggle>
+              <i class="bi bi-sort-down"></i> <span id="resSortLabel">Most popular</span> <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="dash-dropdown__menu">
+              <button class="dash-dropdown__item" data-sort="popular"><i class="bi bi-fire"></i> Most popular</button>
+              <button class="dash-dropdown__item" data-sort="newest"><i class="bi bi-stars"></i> Newest</button>
+              <button class="dash-dropdown__item" data-sort="name"><i class="bi bi-sort-alpha-down"></i> Name (A–Z)</button>
+              <button class="dash-dropdown__item" data-sort="shortest"><i class="bi bi-clock"></i> Shortest</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Active filter bar -->
+      <div class="res-active-filters" id="activeFilters" hidden></div>
+
+      <!-- ============ RESOURCE GRID ============ -->
+      <section class="res-grid" id="resourceGrid" aria-live="polite">
+        <!-- Injected by JS -->
+      </section>
+
+      <!-- ============ EMPTY STATE ============ -->
+      <div class="res-empty" id="resEmpty" hidden>
+        <div class="res-empty__icon"><i class="bi bi-search"></i></div>
+        <h3>No resources match those filters</h3>
+        <p>Try a different search term or clear your filters.</p>
+        <button class="eg-btn eg-btn--primary" id="resEmptyReset">Reset filters</button>
+      </div>
+
+      <!-- ============ LOAD MORE ============ -->
+      <div class="res-loadmore" id="resLoadMoreWrap" hidden>
+        <button class="eg-btn eg-btn--outline eg-btn--lg" id="resLoadMoreBtn">
+          <i class="bi bi-arrow-down-circle"></i> Load more resources
+        </button>
+        <p class="res-loadmore__meta" id="resLoadMoreMeta">Showing 12 of 24</p>
+      </div>
+
+      <p class="dash-footer-note">
+        © 2025 EduGuide AI · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Help Centre</a>
+      </p>
+
+    </main>
+  </div>
+</div>
+
+<!-- ============================================================
+     RESOURCE DETAILS MODAL
+     ============================================================ -->
+<div class="eg-modal" id="resourceModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resourceModalTitle">
+  <div class="eg-modal__backdrop" data-eg-modal-close></div>
+  <div class="eg-modal__dialog eg-modal__dialog--resource">
+    <div class="eg-modal__header">
+      <div class="res-modal-head">
+        <span class="res-modal-head__icon" id="resourceModalIcon"><i class="bi bi-file-text"></i></span>
+        <div>
+          <span class="res-modal-head__type" id="resourceModalType">Article</span>
+          <h3 class="eg-modal__title" id="resourceModalTitle">Resource title</h3>
+          <p class="eg-modal__subtitle mb-0" id="resourceModalProvider">Provider</p>
+        </div>
+      </div>
+      <button class="eg-modal__close" data-eg-modal-close aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="eg-modal__body res-modal-body">
+      <div class="res-modal-meta" id="resourceModalMeta"></div>
+
+      <div class="res-modal-section">
+        <h4 class="res-modal-section__title"><i class="bi bi-info-circle"></i> About this resource</h4>
+        <p class="res-modal-section__text" id="resourceModalDesc"></p>
+      </div>
+
+      <div class="res-modal-section">
+        <h4 class="res-modal-section__title"><i class="bi bi-check2-circle"></i> What you'll gain</h4>
+        <ul class="res-modal-list" id="resourceModalGains"></ul>
+      </div>
+
+      <div class="res-modal-section">
+        <h4 class="res-modal-section__title"><i class="bi bi-tags"></i> Best for</h4>
+        <div class="res-modal-tags" id="resourceModalTags"></div>
+      </div>
+    </div>
+    <div class="eg-modal__footer res-modal-footer">
+      <button class="eg-btn eg-btn--ghost" id="resourceModalSaveBtn">
+        <i class="bi bi-bookmark"></i> <span>Save to library</span>
+      </button>
+      <a href="#" class="eg-btn eg-btn--primary" id="resourceModalVisit" target="_blank" rel="noopener">
+        Visit resource <i class="bi bi-box-arrow-up-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="eg-toasts" id="egToasts" aria-live="polite" aria-atomic="true"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/dashboard-shell.js"></script>
+<script src="assets/js/resources.js"></script>
+</body>
+</html>

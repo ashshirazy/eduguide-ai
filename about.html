@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About Us — EduGuide AI</title>
+<meta name="description" content="Learn about EduGuide AI's mission, vision, values and how we help students across Africa discover their career path." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/animations.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/landing.css" />
+<link rel="stylesheet" href="assets/css/about-contact.css" />
+</head>
+<body>
+
+<a href="#main" class="eg-skip-link">Skip to main content</a>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="eg-navbar" id="egNavbar" aria-label="Main navigation">
+  <div class="eg-container eg-navbar__inner">
+
+    <a class="eg-logo" href="index.html" aria-label="EduGuide AI home">
+      <span class="eg-logo__mark">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <defs>
+            <linearGradient id="lgAbout" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#7B5CFF" />
+              <stop offset="100%" stop-color="#2EA8FF" />
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="14" fill="url(#lgAbout)" />
+          <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+          <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+          <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+        </svg>
+      </span>
+      <span class="eg-logo__word">EduGuide<span class="eg-logo__ai">AI</span></span>
+    </a>
+
+    <button class="eg-navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="eg-navbar__menu" id="navMenu">
+      <ul class="eg-navbar__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#careers">Explore Careers</a></li>
+        <li><a href="index.html#how">How It Works</a></li>
+        <li><a href="about.html" class="is-active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="eg-navbar__auth">
+        <a href="login.html" class="eg-btn eg-btn--ghost">Login</a>
+        <a href="register.html" class="eg-btn eg-btn--primary">Get Started <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="ac-hero">
+    <div class="ac-hero__bg" aria-hidden="true">
+      <span class="ac-hero__blob ac-hero__blob--1"></span>
+      <span class="ac-hero__blob ac-hero__blob--2"></span>
+      <span class="ac-hero__grid"></span>
+    </div>
+
+    <div class="eg-container ac-hero__inner">
+      <span class="eg-eyebrow reveal">
+        <i class="bi bi-info-circle"></i> About EduGuide AI
+      </span>
+      <h1 class="ac-hero__title reveal" data-delay="1">
+        We believe every student deserves <br />
+        <span class="eg-gradient-text">clarity about their future.</span>
+      </h1>
+      <p class="ac-hero__lead reveal" data-delay="2">
+        EduGuide AI was built because too many talented students graduate without knowing
+        where they're headed. We use AI to turn confusion into confidence — one student at a time.
+      </p>
+
+      <div class="ac-hero__stats reveal" data-delay="3">
+        <div class="ac-hero__stat">
+          <span class="ac-hero__stat-value" data-count="50000" data-suffix="+">0</span>
+          <span class="ac-hero__stat-label">Students guided</span>
+        </div>
+        <div class="ac-hero__stat">
+          <span class="ac-hero__stat-value" data-count="500" data-suffix="+">0</span>
+          <span class="ac-hero__stat-label">Career paths mapped</span>
+        </div>
+        <div class="ac-hero__stat">
+          <span class="ac-hero__stat-value" data-count="30" data-suffix="+">0</span>
+          <span class="ac-hero__stat-label">Countries reached</span>
+        </div>
+        <div class="ac-hero__stat">
+          <span class="ac-hero__stat-value" data-count="98" data-suffix="%">0</span>
+          <span class="ac-hero__stat-label">Student satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTRO
+       ============================================================ -->
+  <section class="ac-section">
+    <div class="eg-container">
+      <div class="ac-intro">
+        <div class="ac-intro__copy reveal">
+          <span class="eg-eyebrow"><i class="bi bi-book-half"></i> Our Story</span>
+          <h2 class="ac-section__title">From a simple question to a platform used across Africa</h2>
+          <p class="ac-intro__lead">
+            In 2023, our founding team watched bright, capable students graduate from secondary school
+            with excellent grades — and no idea what to do next. Some chose courses because of parental
+            pressure. Others followed trends. Very few made decisions based on who they actually were.
+          </p>
+          <p class="ac-intro__lead">
+            We knew this wasn't a talent problem. It was an information problem. So we built
+            EduGuide AI — a platform that helps students understand themselves first, then explore
+            careers that match their genuine interests, strengths and values.
+          </p>
+          <p class="ac-intro__lead">
+            Today, EduGuide AI serves over <strong>50,000 students</strong> across 30+ African countries.
+            Our recommendations are used by students, counsellors and parents alike — and every
+            career, roadmap and resource on the platform is reviewed by education and industry experts.
+          </p>
+        </div>
+
+        <div class="ac-intro__visual reveal" data-delay="2">
+          <div class="ac-intro__card ac-intro__card--1">
+            <div class="ac-intro__card-icon ac-intro__card-icon--purple"><i class="bi bi-lightbulb"></i></div>
+            <div>
+              <div class="ac-intro__card-label">Founded</div>
+              <div class="ac-intro__card-value">2023</div>
+            </div>
+          </div>
+          <div class="ac-intro__card ac-intro__card--2">
+            <div class="ac-intro__card-icon ac-intro__card-icon--sky"><i class="bi bi-globe2"></i></div>
+            <div>
+              <div class="ac-intro__card-label">Reach</div>
+              <div class="ac-intro__card-value">30+ countries</div>
+            </div>
+          </div>
+          <div class="ac-intro__card ac-intro__card--3">
+            <div class="ac-intro__card-icon ac-intro__card-icon--success"><i class="bi bi-patch-check"></i></div>
+            <div>
+              <div class="ac-intro__card-label">Careers mapped</div>
+              <div class="ac-intro__card-value">500+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MISSION & VISION
+       ============================================================ -->
+  <section class="ac-section ac-section--muted">
+    <div class="eg-container">
+      <header class="ac-section__head reveal">
+        <span class="eg-eyebrow"><i class="bi bi-compass"></i> Mission &amp; Vision</span>
+        <h2 class="ac-section__title">The principles that guide everything we do</h2>
+      </header>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="ac-mv ac-mv--mission reveal">
+            <div class="ac-mv__icon"><i class="bi bi-bullseye"></i></div>
+            <h3 class="ac-mv__title">Our Mission</h3>
+            <p class="ac-mv__text">
+              To help every student make informed, confident decisions about their education and
+              career — using intelligent guidance that starts with who they are, not who they
+              think they should be.
+            </p>
+            <ul class="ac-mv__list">
+              <li><i class="bi bi-check2-circle"></i> Personalised career guidance for every student</li>
+              <li><i class="bi bi-check2-circle"></i> Accessible on any device, from anywhere</li>
+              <li><i class="bi bi-check2-circle"></i> Free at the core — always</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="ac-mv ac-mv--vision reveal" data-delay="1">
+            <div class="ac-mv__icon"><i class="bi bi-eye"></i></div>
+            <h3 class="ac-mv__title">Our Vision</h3>
+            <p class="ac-mv__text">
+              A continent where every student — regardless of background — can discover, pursue
+              and succeed in careers that match their talents and passions.
+            </p>
+            <ul class="ac-mv__list">
+              <li><i class="bi bi-check2-circle"></i> Bridge the career-awareness gap across Africa</li>
+              <li><i class="bi bi-check2-circle"></i> Connect learning to real opportunities</li>
+              <li><i class="bi bi-check2-circle"></i> Build a generation of confident, purpose-driven professionals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OBJECTIVES
+       ============================================================ -->
+  <section class="ac-section">
+    <div class="eg-container">
+      <header class="ac-section__head reveal">
+        <span class="eg-eyebrow"><i class="bi bi-list-check"></i> Our Objectives</span>
+        <h2 class="ac-section__title">What we're here to achieve</h2>
+        <p class="ac-section__lead">
+          Four concrete objectives that shape every decision, feature and partnership we make.
+        </p>
+      </header>
+
+      <div class="ac-objectives">
+        <article class="ac-objective reveal">
+          <div class="ac-objective__num">01</div>
+          <div class="ac-objective__icon ac-objective__icon--purple"><i class="bi bi-clipboard2-pulse"></i></div>
+          <h3 class="ac-objective__title">Simplify career discovery</h3>
+          <p class="ac-objective__text">
+            Replace overwhelming choice with a structured, personalised assessment that
+            surfaces the careers most likely to fit you.
+          </p>
+        </article>
+
+        <article class="ac-objective reveal" data-delay="1">
+          <div class="ac-objective__num">02</div>
+          <div class="ac-objective__icon ac-objective__icon--sky"><i class="bi bi-signpost-split"></i></div>
+          <h3 class="ac-objective__title">Provide actionable roadmaps</h3>
+          <p class="ac-objective__text">
+            Every career comes with a step-by-step learning roadmap — from beginner to
+            professional — so students know exactly what to do next.
+          </p>
+        </article>
+
+        <article class="ac-objective reveal" data-delay="2">
+          <div class="ac-objective__num">03</div>
+          <div class="ac-objective__icon ac-objective__icon--success"><i class="bi bi-collection-play"></i></div>
+          <h3 class="ac-objective__title">Curate quality resources</h3>
+          <p class="ac-objective__text">
+            Surface the best courses, books, scholarships and certifications — vetted by
+            educators and industry professionals.
+          </p>
+        </article>
+
+        <article class="ac-objective reveal" data-delay="3">
+          <div class="ac-objective__num">04</div>
+          <div class="ac-objective__icon ac-objective__icon--warning"><i class="bi bi-people"></i></div>
+          <h3 class="ac-objective__title">Empower schools &amp; counsellors</h3>
+          <p class="ac-objective__text">
+            Give counsellors and educators the tools to support more students, more effectively,
+            without sacrificing personal attention.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CORE VALUES
+       ============================================================ -->
+  <section class="ac-section ac-section--muted">
+    <div class="eg-container">
+      <header class="ac-section__head reveal">
+        <span class="eg-eyebrow"><i class="bi bi-heart"></i> Core Values</span>
+        <h2 class="ac-section__title">The values behind the product</h2>
+      </header>
+
+      <div class="ac-values">
+        <div class="ac-value reveal">
+          <div class="ac-value__icon"><i class="bi bi-shield-check"></i></div>
+          <h3 class="ac-value__title">Trust First</h3>
+          <p class="ac-value__text">
+            We treat student data with the same care we'd treat our own. Privacy is not a
+            feature — it's a foundation.
+          </p>
+        </div>
+        <div class="ac-value reveal" data-delay="1">
+          <div class="ac-value__icon"><i class="bi bi-lightbulb"></i></div>
+          <h3 class="ac-value__title">Clarity Over Noise</h3>
+          <p class="ac-value__text">
+            We believe good guidance makes things simpler, not more overwhelming. Every feature
+            earns its place.
+          </p>
+        </div>
+        <div class="ac-value reveal" data-delay="2">
+          <div class="ac-value__icon"><i class="bi bi-globe-africa"></i></div>
+          <h3 class="ac-value__title">African By Design</h3>
+          <p class="ac-value__text">
+            Our careers, roadmaps and salary ranges are built for African students — not
+            adapted from somewhere else.
+          </p>
+        </div>
+        <div class="ac-value reveal" data-delay="3">
+          <div class="ac-value__icon"><i class="bi bi-gift"></i></div>
+          <h3 class="ac-value__title">Accessible To All</h3>
+          <p class="ac-value__text">
+            Free for every student. Great on slow connections. Works on the most affordable
+            smartphone. No compromises.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW WE HELP
+       ============================================================ -->
+  <section class="ac-section">
+    <div class="eg-container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal">
+          <span class="eg-eyebrow"><i class="bi bi-stars"></i> How We Help</span>
+          <h2 class="ac-section__title">Intelligence that starts with you</h2>
+          <p class="ac-section__lead">
+            EduGuide AI isn't a personality quiz. It's a guided journey that combines
+            self-discovery, career exploration and action planning into one clear path.
+          </p>
+
+          <ul class="ac-help-list">
+            <li>
+              <div class="ac-help-list__icon"><i class="bi bi-1-circle"></i></div>
+              <div>
+                <strong>Discover yourself</strong>
+                <p>A structured assessment across interests, skills, personality and aspirations.</p>
+              </div>
+            </li>
+            <li>
+              <div class="ac-help-list__icon"><i class="bi bi-2-circle"></i></div>
+              <div>
+                <strong>Explore your matches</strong>
+                <p>Personalised career recommendations ranked by real compatibility.</p>
+              </div>
+            </li>
+            <li>
+              <div class="ac-help-list__icon"><i class="bi bi-3-circle"></i></div>
+              <div>
+                <strong>Follow a clear roadmap</strong>
+                <p>Step-by-step paths from where you are now to where you want to be.</p>
+              </div>
+            </li>
+            <li>
+              <div class="ac-help-list__icon"><i class="bi bi-4-circle"></i></div>
+              <div>
+                <strong>Track your progress</strong>
+                <p>Monitor milestones, achievements and momentum as you learn.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a href="register.html" class="eg-btn eg-btn--primary eg-btn--lg">
+            <i class="bi bi-person-plus"></i> Start Your Journey
+          </a>
+        </div>
+
+        <div class="col-lg-6 reveal" data-delay="2">
+          <div class="ac-help-visual">
+            <div class="ac-help-visual__bg"></div>
+            <div class="ac-help-visual__card ac-help-visual__card--1">
+              <div class="ac-help-visual__card-icon ac-help-visual__card-icon--purple"><i class="bi bi-brain"></i></div>
+              <div>
+                <div class="ac-help-visual__card-title">Assessment</div>
+                <div class="ac-help-visual__card-meta">20 questions · 8 dimensions</div>
+              </div>
+            </div>
+            <div class="ac-help-visual__card ac-help-visual__card--2">
+              <div class="ac-help-visual__card-icon ac-help-visual__card-icon--sky"><i class="bi bi-stars"></i></div>
+              <div>
+                <div class="ac-help-visual__card-title">12 matches</div>
+                <div class="ac-help-visual__card-meta">Personalised for you</div>
+              </div>
+            </div>
+            <div class="ac-help-visual__card ac-help-visual__card--3">
+              <div class="ac-help-visual__card-icon ac-help-visual__card-icon--success"><i class="bi bi-signpost-split"></i></div>
+              <div>
+                <div class="ac-help-visual__card-title">Roadmap</div>
+                <div class="ac-help-visual__card-meta">32 modules · 4 stages</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA
+       ============================================================ -->
+  <section class="eg-cta">
+    <div class="eg-cta__bg" aria-hidden="true">
+      <span class="eg-cta__blob eg-cta__blob--1"></span>
+      <span class="eg-cta__blob eg-cta__blob--2"></span>
+    </div>
+    <div class="eg-container eg-cta__inner reveal">
+      <span class="eg-eyebrow eg-eyebrow--light"><i class="bi bi-rocket-takeoff"></i> Ready to Begin?</span>
+      <h2 class="eg-cta__title">Your future is worth investing in.</h2>
+      <p class="eg-cta__lead">
+        Join 50,000+ students across Africa who are using EduGuide AI to make confident
+        decisions about their future — for free.
+      </p>
+      <div class="eg-cta__actions">
+        <a href="register.html" class="eg-btn eg-btn--light eg-btn--lg">
+          <i class="bi bi-person-plus"></i> Create Your Account
+        </a>
+        <a href="contact.html" class="eg-btn eg-btn--outline-light eg-btn--lg">
+          <i class="bi bi-chat-dots"></i> Talk To Us
+        </a>
+      </div>
+      <p class="eg-cta__note">No credit card · Free forever for students</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="eg-footer">
+  <div class="eg-container">
+    <div class="row g-4 eg-footer__top">
+      <div class="col-lg-4">
+        <a class="eg-logo eg-logo--footer" href="index.html">
+          <span class="eg-logo__mark">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <defs>
+                <linearGradient id="lgFootAbout" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#7B5CFF" />
+                  <stop offset="100%" stop-color="#2EA8FF" />
+                </linearGradient>
+              </defs>
+              <rect width="48" height="48" rx="14" fill="url(#lgFootAbout)" />
+              <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+              <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                    fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+              <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+            </svg>
+          </span>
+          <span class="eg-logo__word eg-logo__word--light">EduGuide<span class="eg-logo__ai">AI</span></span>
+        </a>
+        <p class="eg-footer__tagline">
+          Empowering students to make informed decisions about their education and future.
+        </p>
+        <div class="eg-footer__social">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Platform</h4>
+        <ul class="eg-footer__links">
+          <li><a href="index.html#careers">Explore Careers</a></li>
+          <li><a href="register.html">Career Assessment</a></li>
+          <li><a href="register.html">Learning Roadmaps</a></li>
+          <li><a href="register.html">Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Company</h4>
+        <ul class="eg-footer__links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Support</h4>
+        <ul class="eg-footer__links">
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Contact</h4>
+        <ul class="eg-footer__links eg-footer__links--info">
+          <li><i class="bi bi-envelope"></i> hello@eduguide.ai</li>
+          <li><i class="bi bi-telephone"></i> +234 800 000 0000</li>
+          <li><i class="bi bi-geo-alt"></i> Lagos, Nigeria</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="eg-footer__bottom">
+      <p>© 2025 EduGuide AI. All rights reserved.</p>
+      <p>Made with <i class="bi bi-heart-fill"></i> for students across Africa.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="eg-back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<div class="eg-toasts" id="egToasts" aria-live="polite" aria-atomic="true"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/landing.js"></script>
+<script src="assets/js/about-contact.js"></script>
+</body>
+</html>

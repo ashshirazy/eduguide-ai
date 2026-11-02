@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EduGuide AI — Discover Your Potential. Build Your Future.</title>
+<meta name="description" content="EduGuide AI helps secondary, undergraduate and postgraduate students discover their strengths, explore careers and build personalised roadmaps to success." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<!-- Phase 1 design system -->
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/animations.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<!-- Phase 2 landing page -->
+<link rel="stylesheet" href="assets/css/landing.css" />
+</head>
+<body>
+
+<a href="#main" class="eg-skip-link">Skip to main content</a>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="eg-navbar" id="egNavbar" aria-label="Main navigation">
+  <div class="eg-container eg-navbar__inner">
+
+    <a class="eg-logo" href="#home" aria-label="EduGuide AI home">
+      <span class="eg-logo__mark">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <defs>
+            <linearGradient id="lgNav" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#7B5CFF" />
+              <stop offset="100%" stop-color="#2EA8FF" />
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="14" fill="url(#lgNav)" />
+          <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+          <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+          <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+        </svg>
+      </span>
+      <span class="eg-logo__word">EduGuide<span class="eg-logo__ai">AI</span></span>
+    </a>
+
+    <button class="eg-navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="eg-navbar__menu" id="navMenu">
+      <ul class="eg-navbar__links">
+        <li><a href="#home" class="is-active">Home</a></li>
+        <li><a href="#careers">Explore Careers</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="eg-navbar__auth">
+        <a href="login.html" class="eg-btn eg-btn--ghost">Login</a>
+        <a href="register.html" class="eg-btn eg-btn--primary">Get Started <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="eg-hero" id="home">
+    <div class="eg-hero__bg" aria-hidden="true">
+      <span class="eg-hero__blob eg-hero__blob--1"></span>
+      <span class="eg-hero__blob eg-hero__blob--2"></span>
+      <span class="eg-hero__blob eg-hero__blob--3"></span>
+      <span class="eg-hero__grid"></span>
+    </div>
+
+    <div class="eg-container eg-hero__inner">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6 eg-hero__copy">
+          <span class="eg-eyebrow reveal">
+            <i class="bi bi-stars"></i> AI-Powered Career Guidance
+          </span>
+
+          <h1 class="eg-hero__title reveal" data-delay="1">
+            Discover Your Potential.<br />
+            <span class="eg-gradient-text">Build Your Future.</span>
+          </h1>
+
+          <p class="eg-hero__lead reveal" data-delay="2">
+            Your future starts with the right decision. EduGuide AI helps you discover your
+            strengths, explore career opportunities, and find the right path to success.
+          </p>
+
+          <div class="eg-hero__cta reveal" data-delay="3">
+            <a href="register.html" class="eg-btn eg-btn--primary eg-btn--lg">
+              <i class="bi bi-compass"></i> Discover Your Career
+            </a>
+            <a href="#careers" class="eg-btn eg-btn--outline eg-btn--lg">
+              <i class="bi bi-grid-3x3-gap"></i> Explore Careers
+            </a>
+          </div>
+
+          <div class="eg-hero__trust reveal" data-delay="4">
+            <div class="eg-hero__avatars">
+              <span style="--c:#7B5CFF">A</span>
+              <span style="--c:#2EA8FF">D</span>
+              <span style="--c:#10B981">F</span>
+              <span style="--c:#F59E0B">K</span>
+              <span class="eg-hero__avatars-more">+</span>
+            </div>
+            <div>
+              <div class="eg-hero__trust-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <div class="eg-hero__trust-text">
+                Trusted by <strong>50,000+</strong> students across Africa
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="eg-hero__visual reveal" data-delay="2">
+
+            <div class="hero-bg-orb hero-bg-orb--1"></div>
+            <div class="hero-bg-orb hero-bg-orb--2"></div>
+
+            <div class="hero-showcase">
+
+              <div class="hero-orb">
+                <div class="hero-orb__ring hero-orb__ring--1"></div>
+                <div class="hero-orb__ring hero-orb__ring--2"></div>
+                <div class="hero-orb__ring hero-orb__ring--3"></div>
+                <div class="hero-orb__core">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="lgOrb" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#fff" />
+                        <stop offset="100%" stop-color="#E0F2FE" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M24 8 38 15 24 22 10 15z" fill="url(#lgOrb)" />
+                    <path d="M15 18v7c0 3.3 3.9 5.6 9 5.6s9-2.3 9-5.6v-7"
+                          fill="none" stroke="url(#lgOrb)" stroke-width="2.6" stroke-linecap="round" />
+                    <circle cx="38" cy="30" r="2.4" fill="#fff" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="hero-float hero-float--match">
+                <div class="hero-float__icon hero-float__icon--purple"><i class="bi bi-briefcase"></i></div>
+                <div class="hero-float__body">
+                  <div class="hero-float__label">Top Match</div>
+                  <div class="hero-float__title">Software Engineer</div>
+                  <div class="hero-float__progress"><span style="width:94%"></span></div>
+                  <div class="hero-float__meta">94% compatibility</div>
+                </div>
+              </div>
+
+              <div class="hero-float hero-float--done">
+                <div class="hero-float__icon hero-float__icon--success"><i class="bi bi-check-lg"></i></div>
+                <div class="hero-float__body">
+                  <div class="hero-float__label">Assessment</div>
+                  <div class="hero-float__title">Complete</div>
+                </div>
+              </div>
+
+              <div class="hero-float hero-float--people">
+                <div class="hero-float__avatars">
+                  <span style="--c:#7B5CFF">A</span>
+                  <span style="--c:#2EA8FF">O</span>
+                  <span style="--c:#10B981">K</span>
+                  <span class="hero-float__avatars-more">+</span>
+                </div>
+                <div class="hero-float__body">
+                  <div class="hero-float__title">12 careers</div>
+                  <div class="hero-float__meta">matched today</div>
+                </div>
+              </div>
+
+              <span class="hero-sparkle" style="--x:8%;--y:18%;--d:0s">✦</span>
+              <span class="hero-sparkle" style="--x:88%;--y:12%;--d:.6s">✦</span>
+              <span class="hero-sparkle" style="--x:82%;--y:82%;--d:1.2s">✦</span>
+              <span class="hero-sparkle" style="--x:12%;--y:78%;--d:1.8s">✦</span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS BAR
+       ============================================================ -->
+  <section class="eg-stats" aria-label="Platform statistics">
+    <div class="eg-container">
+      <div class="eg-stats__grid">
+        <div class="eg-stats__item reveal">
+          <div class="eg-stats__value" data-count="50000" data-suffix="+">0</div>
+          <div class="eg-stats__label">Students Guided</div>
+        </div>
+        <div class="eg-stats__item reveal" data-delay="1">
+          <div class="eg-stats__value" data-count="500" data-suffix="+">0</div>
+          <div class="eg-stats__label">Career Paths</div>
+        </div>
+        <div class="eg-stats__item reveal" data-delay="2">
+          <div class="eg-stats__value" data-count="98" data-suffix="%">0</div>
+          <div class="eg-stats__label">Satisfaction Rate</div>
+        </div>
+        <div class="eg-stats__item reveal" data-delay="3">
+          <div class="eg-stats__value" data-count="40" data-suffix="+">0</div>
+          <div class="eg-stats__label">Learning Resources</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURES
+       ============================================================ -->
+  <section class="eg-section" id="features">
+    <div class="eg-container">
+      <header class="eg-section-head reveal">
+        <span class="eg-eyebrow"><i class="bi bi-grid-3x3-gap"></i> Platform Features</span>
+        <h2>Everything you need to find your path</h2>
+        <p>One platform, six powerful tools — all designed to take you from confused to confident about your future.</p>
+      </header>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <article class="eg-feature-card reveal">
+            <div class="eg-feature-card__icon eg-feature-card__icon--purple"><i class="bi bi-clipboard2-pulse"></i></div>
+            <h3 class="eg-feature-card__title">AI Career Assessment</h3>
+            <p class="eg-feature-card__text">Discover your interests, strengths and personality through a scientifically designed assessment.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="eg-feature-card reveal" data-delay="1">
+            <div class="eg-feature-card__icon eg-feature-card__icon--sky"><i class="bi bi-compass"></i></div>
+            <h3 class="eg-feature-card__title">Career Explorer</h3>
+            <p class="eg-feature-card__text">Explore 500+ careers across 10 categories with detailed insights, requirements and opportunities.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="eg-feature-card reveal" data-delay="2">
+            <div class="eg-feature-card__icon eg-feature-card__icon--success"><i class="bi bi-stars"></i></div>
+            <h3 class="eg-feature-card__title">Personalised Matches</h3>
+            <p class="eg-feature-card__text">Get career recommendations ranked by compatibility with your unique profile and interests.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="eg-feature-card reveal" data-delay="1">
+            <div class="eg-feature-card__icon eg-feature-card__icon--warning"><i class="bi bi-signpost-split"></i></div>
+            <h3 class="eg-feature-card__title">Learning Roadmaps</h3>
+            <p class="eg-feature-card__text">Follow a step-by-step roadmap from beginner to professional in any career you choose.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="eg-feature-card reveal" data-delay="2">
+            <div class="eg-feature-card__icon eg-feature-card__icon--accent"><i class="bi bi-collection-play"></i></div>
+            <h3 class="eg-feature-card__title">Resource Centre</h3>
+            <p class="eg-feature-card__text">Access curated articles, courses, books and scholarships tailored to every career stage.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="eg-feature-card reveal" data-delay="3">
+            <div class="eg-feature-card__icon eg-feature-card__icon--danger"><i class="bi bi-graph-up-arrow"></i></div>
+            <h3 class="eg-feature-card__title">Progress Tracking</h3>
+            <p class="eg-feature-card__text">Monitor your growth with dashboards, achievements, streaks and completion milestones.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW IT WORKS
+       ============================================================ -->
+  <section class="eg-section eg-section--muted" id="how">
+    <div class="eg-container">
+      <header class="eg-section-head reveal">
+        <span class="eg-eyebrow"><i class="bi bi-signpost-2"></i> How It Works</span>
+        <h2>From confused to confident in four steps</h2>
+        <p>No more guessing about your future. EduGuide AI walks with you from the first question to your first career milestone.</p>
+      </header>
+
+      <div class="eg-steps">
+        <div class="eg-steps__line" aria-hidden="true"></div>
+
+        <div class="eg-step reveal">
+          <div class="eg-step__num">1</div>
+          <div class="eg-step__icon"><i class="bi bi-person-plus"></i></div>
+          <h3 class="eg-step__title">Create Your Profile</h3>
+          <p class="eg-step__text">Sign up in under 2 minutes. Tell us about your education, school and interests.</p>
+        </div>
+
+        <div class="eg-step reveal" data-delay="1">
+          <div class="eg-step__num">2</div>
+          <div class="eg-step__icon"><i class="bi bi-clipboard2-check"></i></div>
+          <h3 class="eg-step__title">Take the Assessment</h3>
+          <p class="eg-step__text">Answer a few questions about your interests, skills and personality.</p>
+        </div>
+
+        <div class="eg-step reveal" data-delay="2">
+          <div class="eg-step__num">3</div>
+          <div class="eg-step__icon"><i class="bi bi-magic"></i></div>
+          <h3 class="eg-step__title">Discover Your Matches</h3>
+          <p class="eg-step__text">Receive a ranked list of careers that fit your unique profile.</p>
+        </div>
+
+        <div class="eg-step reveal" data-delay="3">
+          <div class="eg-step__num">4</div>
+          <div class="eg-step__icon"><i class="bi bi-signpost-split"></i></div>
+          <h3 class="eg-step__title">Build Your Roadmap</h3>
+          <p class="eg-step__text">Follow a clear, step-by-step path from where you are to where you want to be.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CAREER CATEGORIES
+       ============================================================ -->
+  <section class="eg-section" id="careers">
+    <div class="eg-container">
+      <header class="eg-section-head reveal">
+        <span class="eg-eyebrow"><i class="bi bi-grid"></i> Career Categories</span>
+        <h2>Explore careers across every field</h2>
+        <p>From technology to creative arts — discover the paths that match who you are.</p>
+      </header>
+
+      <div class="eg-categories">
+        <a href="register.html" class="eg-category reveal">
+          <div class="eg-category__icon eg-category__icon--purple"><i class="bi bi-cpu"></i></div>
+          <h3 class="eg-category__title">Technology</h3>
+          <p class="eg-category__text">Software, data, AI, cybersecurity</p>
+          <span class="eg-category__link">Explore <i class="bi bi-arrow-right"></i></span>
+        </a>
+
+        <a href="register.html" class="eg-category reveal" data-delay="1">
+          <div class="eg-category__icon eg-category__icon--danger"><i class="bi bi-heart-pulse"></i></div>
+          <h3 class="eg-category__title">Medicine &amp; Health</h3>
+          <p class="eg-category__text">Doctors, nursing, pharmacy</p>
+          <span class="eg-category__link">Explore <i class="bi bi-arrow-right"></i></span>
+        </a>
+
+        <a href="register.html" class="eg-category reveal" data-delay="2">
+          <div class="eg-category__icon eg-category__icon--warning"><i class="bi bi-gear"></i></div>
+          <h3 class="eg-category__title">Engineering</h3>
+          <p class="eg-category__text">Civil, mechanical, electrical</p>
+          <span class="eg-category__link">Explore <i class="bi bi-arrow-right"></i></span>
+        </a>
+
+        <a href="register.html" class="eg-category reveal">
+          <div class="eg-category__icon eg-category__icon--success"><i class="bi bi-mortarboard"></i></div>
+          <h3 class="eg-category__title">Education</h3>
+          <p class="eg-category__text">Teaching, research, curriculum</p>
+          <span class="eg-category__link">Explore <i class="bi bi-arrow-right"></i></span>
+        </a>
+
+        <a href="register.html" class="eg-category reveal" data-delay="1">
+          <div class="eg-category__icon eg-category__icon--sky"><i class="bi bi-briefcase"></i></div>
+          <h3 class="eg-category__title">Business &amp; Finance</h3>
+          <p class="eg-category__text">Accounting, marketing, banking</p>
+          <span class="eg-category__link">Explore <i class="bi bi-arrow-right"></i></span>
+        </a>
+
+        <a href="register.html" class="eg-category reveal" data-delay="2">
+          <div class="eg-category__icon eg-category__icon--success"><i class="bi bi-tree"></i></div>
+          <h3 class="eg-category__title">Agriculture</h3>
+          <p class="eg-category__text">Agronomy, agribusiness, food</p>
+          <span class="eg-category__link">Explore <i class="bi bi-arrow-right"></i></span>
+        </a>
+
+        <a href="register.html" class="eg-category reveal">
+          <div class="eg-category__icon eg-category__icon--accent"><i class="bi bi-shield-check"></i></div>
+          <h3 class="eg-category__title">Law</h3>
+          <p class="eg-category__text">Legal practice, corporate law</p>
+          <span class="eg-category__link">Explore <i class="bi bi-arrow-right"></i></span>
+        </a>
+
+        <a href="register.html" class="eg-category reveal" data-delay="1">
+          <div class="eg-category__icon eg-category__icon--purple"><i class="bi bi-flask"></i></div>
+          <h3 class="eg-category__title">Science</h3>
+          <p class="eg-category__text">Physics, chemistry, biology</p>
+          <span class="eg-category__link">Explore <i class="bi bi-arrow-right"></i></span>
+        </a>
+
+        <a href="register.html" class="eg-category reveal" data-delay="2">
+          <div class="eg-category__icon eg-category__icon--warning"><i class="bi bi-palette"></i></div>
+          <h3 class="eg-category__title">Creative Arts</h3>
+          <p class="eg-category__text">Design, film, music, writing</p>
+          <span class="eg-category__link">Explore <i class="bi bi-arrow-right"></i></span>
+        </a>
+
+        <a href="register.html" class="eg-category reveal">
+          <div class="eg-category__icon eg-category__icon--sky"><i class="bi bi-people"></i></div>
+          <h3 class="eg-category__title">Social Sciences</h3>
+          <p class="eg-category__text">Psychology, sociology, policy</p>
+          <span class="eg-category__link">Explore <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHY CHOOSE
+       ============================================================ -->
+  <section class="eg-section eg-section--muted" id="about">
+    <div class="eg-container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6 reveal">
+          <span class="eg-eyebrow"><i class="bi bi-award"></i> Why EduGuide AI</span>
+          <h2 class="eg-section-head__title">Guidance that actually understands students</h2>
+          <p class="eg-section-head__lead">
+            We didn't build a career tool for adults and hand it to students.
+            EduGuide AI was designed from the ground up for secondary, undergraduate
+            and postgraduate students.
+          </p>
+
+          <ul class="eg-why-list">
+            <li>
+              <div class="eg-why-list__icon"><i class="bi bi-mortarboard"></i></div>
+              <div>
+                <strong>Built for students</strong>
+                <p>Three learning levels — each with tailored advice, careers and roadmaps.</p>
+              </div>
+            </li>
+            <li>
+              <div class="eg-why-list__icon"><i class="bi bi-cpu"></i></div>
+              <div>
+                <strong>AI-powered insights</strong>
+                <p>Recommendations based on your actual interests, not generic advice.</p>
+              </div>
+            </li>
+            <li>
+              <div class="eg-why-list__icon"><i class="bi bi-patch-check"></i></div>
+              <div>
+                <strong>Expert-verified content</strong>
+                <p>Every career and roadmap reviewed by education and industry experts.</p>
+              </div>
+            </li>
+            <li>
+              <div class="eg-why-list__icon"><i class="bi bi-gift"></i></div>
+              <div>
+                <strong>Free to start</strong>
+                <p>The core assessment and career explorer are free for every student.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6 reveal" data-delay="2">
+          <div class="eg-why-visual">
+            <div class="eg-why-visual__card eg-why-visual__card--1">
+              <div class="eg-stat__icon eg-stat__icon--purple"><i class="bi bi-graph-up-arrow"></i></div>
+              <div>
+                <div class="eg-why-visual__label">Profile strength</div>
+                <div class="eg-why-visual__value">92%</div>
+              </div>
+            </div>
+            <div class="eg-why-visual__card eg-why-visual__card--2">
+              <div class="eg-stat__icon eg-stat__icon--success"><i class="bi bi-check2-circle"></i></div>
+              <div>
+                <div class="eg-why-visual__label">Assessment</div>
+                <div class="eg-why-visual__value">Complete</div>
+              </div>
+            </div>
+            <div class="eg-why-visual__card eg-why-visual__card--3">
+              <div class="eg-why-visual__label mb-2">Roadmap progress</div>
+              <div class="eg-progress mb-2"><div class="eg-progress__bar" data-progress="72"></div></div>
+              <div class="eg-why-visual__meta">Intermediate · 72%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+       ============================================================ -->
+  <section class="eg-section" id="testimonials">
+    <div class="eg-container">
+      <header class="eg-section-head reveal">
+        <span class="eg-eyebrow"><i class="bi bi-chat-quote"></i> Student Stories</span>
+        <h2>Real students. Real clarity.</h2>
+        <p>Thousands of students have already found their path with EduGuide AI.</p>
+      </header>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <article class="eg-testimonial reveal">
+            <div class="eg-testimonial__stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="eg-testimonial__quote">
+              "EduGuide AI helped me discover that data science was my true calling.
+              The roadmap made it feel achievable — I'm now two certificates in."
+            </p>
+            <div class="eg-testimonial__author">
+              <span class="eg-testimonial__avatar" style="--c:#7B5CFF"></span>
+              <div>
+                <div class="eg-testimonial__name">Sani Abubakar</div>
+                <div class="eg-testimonial__role">Undergraduate ·Nasarawa State University Keffi</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="eg-testimonial reveal" data-delay="1">
+            <div class="eg-testimonial__stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="eg-testimonial__quote">
+              "I was completely lost after secondary school. The assessment gave me
+              clarity and confidence. I now know exactly what to study and why."
+            </p>
+            <div class="eg-testimonial__author">
+              <span class="eg-testimonial__avatar" style="--c:#2EA8FF">AS</span>
+              <div>
+                <div class="eg-testimonial__name">Abdulladif Suleiman</div>
+                <div class="eg-testimonial__role">Secondary School · Unity Academy</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="eg-testimonial reveal" data-delay="2">
+            <div class="eg-testimonial__stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="eg-testimonial__quote">
+              "The career explorer opened my eyes to options I never knew existed.
+              I switched my postgraduate focus and never looked back."
+            </p>
+            <div class="eg-testimonial__author">
+              <span class="eg-testimonial__avatar" style="--c:#10B981">FA</span>
+              <div>
+                <div class="eg-testimonial__name">Fatima Ahmed</div>
+                <div class="eg-testimonial__role">Postgraduate · Nasarwa State University Keffi</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section class="eg-section eg-section--muted" id="faq">
+    <div class="eg-container">
+      <div class="row g-5">
+        <div class="col-lg-4 reveal">
+          <span class="eg-eyebrow"><i class="bi bi-question-circle"></i> FAQ</span>
+          <h2 class="eg-section-head__title">Questions? We've got answers.</h2>
+          <p class="eg-section-head__lead">
+            Can't find what you're looking for? Reach out to our team at
+            <a href="mailto:hello@eduguide.ai">hello@eduguide.ai</a>.
+          </p>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="eg-faq" data-eg-faq>
+            <div class="eg-faq__item is-open reveal">
+              <button class="eg-faq__question" aria-expanded="true">
+                <span>Is EduGuide AI free for students?</span>
+                <i class="bi bi-plus-lg"></i>
+              </button>
+              <div class="eg-faq__answer">
+                <p>Yes. The core career assessment and career explorer are completely free for all students. Premium features — like mentor sessions and certification tracks — are optional.</p>
+              </div>
+            </div>
+
+            <div class="eg-faq__item reveal">
+              <button class="eg-faq__question" aria-expanded="false">
+                <span>How accurate are the career recommendations?</span>
+                <i class="bi bi-plus-lg"></i>
+              </button>
+              <div class="eg-faq__answer">
+                <p>Recommendations are generated from your assessment profile using a weighted scoring model across interests, skills, personality and academic preferences. They're designed as a strong starting point — best used alongside a conversation with your school counsellor.</p>
+              </div>
+            </div>
+
+            <div class="eg-faq__item reveal">
+              <button class="eg-faq__question" aria-expanded="false">
+                <span>Do I need to create an account?</span>
+                <i class="bi bi-plus-lg"></i>
+              </button>
+              <div class="eg-faq__answer">
+                <p>You can browse careers without an account. To take the assessment, save careers and track your roadmap, you'll need a free account — it takes under two minutes.</p>
+              </div>
+            </div>
+
+            <div class="eg-faq__item reveal">
+              <button class="eg-faq__question" aria-expanded="false">
+                <span>Which educational levels are supported?</span>
+                <i class="bi bi-plus-lg"></i>
+              </button>
+              <div class="eg-faq__answer">
+                <p>EduGuide AI supports three levels: Secondary School, Undergraduate and Postgraduate. Your dashboard, recommendations and roadmaps all adapt to your level.</p>
+              </div>
+            </div>
+
+            <div class="eg-faq__item reveal">
+              <button class="eg-faq__question" aria-expanded="false">
+                <span>Can I save careers and resources?</span>
+                <i class="bi bi-plus-lg"></i>
+              </button>
+              <div class="eg-faq__answer">
+                <p>Yes — every career, resource and roadmap stage can be bookmarked to your profile. You can review them anytime from your dashboard.</p>
+              </div>
+            </div>
+
+            <div class="eg-faq__item reveal">
+              <button class="eg-faq__question" aria-expanded="false">
+                <span>How long does the assessment take?</span>
+                <i class="bi bi-plus-lg"></i>
+              </button>
+              <div class="eg-faq__answer">
+                <p>About 12 minutes. You can pause at any point and come back later — your answers are saved automatically.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA
+       ============================================================ -->
+  <section class="eg-cta">
+    <div class="eg-cta__bg" aria-hidden="true">
+      <span class="eg-cta__blob eg-cta__blob--1"></span>
+      <span class="eg-cta__blob eg-cta__blob--2"></span>
+    </div>
+    <div class="eg-container eg-cta__inner reveal">
+      <span class="eg-eyebrow eg-eyebrow--light"><i class="bi bi-rocket-takeoff"></i> Start Today</span>
+      <h2 class="eg-cta__title">Ready to discover your path?</h2>
+      <p class="eg-cta__lead">
+        Join 50,000+ students who found clarity with EduGuide AI.
+        Your assessment takes 12 minutes — your future starts today.
+      </p>
+      <div class="eg-cta__actions">
+        <a href="register.html" class="eg-btn eg-btn--light eg-btn--lg">
+          <i class="bi bi-person-plus"></i> Get Started — It's Free
+        </a>
+        <a href="#careers" class="eg-btn eg-btn--outline-light eg-btn--lg">
+          <i class="bi bi-compass"></i> Explore Careers
+        </a>
+      </div>
+      <p class="eg-cta__note">No credit card required · Free forever for students</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NEWSLETTER
+       ============================================================ -->
+  <section class="eg-newsletter" id="contact">
+    <div class="eg-container">
+      <div class="eg-newsletter__inner reveal">
+        <div class="eg-newsletter__copy">
+          <span class="eg-eyebrow"><i class="bi bi-envelope-paper"></i> Newsletter</span>
+          <h2 class="eg-newsletter__title">Career tips, scholarships &amp; updates — straight to your inbox.</h2>
+          <p class="eg-newsletter__lead">One email a month. No spam. Unsubscribe anytime.</p>
+        </div>
+
+        <form class="eg-newsletter__form" id="newsletterForm" novalidate>
+          <div class="eg-input-group">
+            <i class="bi bi-envelope eg-input-icon"></i>
+            <input type="email" class="eg-input has-icon" id="newsletterEmail" placeholder="Enter your email address" required />
+          </div>
+          <button type="submit" class="eg-btn eg-btn--primary">
+            Subscribe <i class="bi bi-arrow-right"></i>
+          </button>
+          <p class="eg-newsletter__msg" id="newsletterMsg" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="eg-footer">
+  <div class="eg-container">
+    <div class="row g-4 eg-footer__top">
+
+      <div class="col-lg-4">
+        <a class="eg-logo eg-logo--footer" href="#home">
+          <span class="eg-logo__mark">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <defs>
+                <linearGradient id="lgFoot" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#7B5CFF" />
+                  <stop offset="100%" stop-color="#2EA8FF" />
+                </linearGradient>
+              </defs>
+              <rect width="48" height="48" rx="14" fill="url(#lgFoot)" />
+              <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+              <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                    fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+              <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+            </svg>
+          </span>
+          <span class="eg-logo__word eg-logo__word--light">EduGuide<span class="eg-logo__ai">AI</span></span>
+        </a>
+        <p class="eg-footer__tagline">
+          Empowering students to make informed decisions about their education and future.
+        </p>
+        <div class="eg-footer__social">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Platform</h4>
+        <ul class="eg-footer__links">
+          <li><a href="#careers">Explore Careers</a></li>
+          <li><a href="register.html">Career Assessment</a></li>
+          <li><a href="register.html">Learning Roadmaps</a></li>
+          <li><a href="register.html">Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Company</h4>
+        <ul class="eg-footer__links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Support</h4>
+        <ul class="eg-footer__links">
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4 class="eg-footer__heading">Contact</h4>
+        <ul class="eg-footer__links eg-footer__links--info">
+          <li><i class="bi bi-envelope"></i> hello@eduguide.ai</li>
+          <li><i class="bi bi-telephone"></i> +234 8148797462</li>
+          <li><i class="bi bi-geo-alt"></i> Keffi, Nigeria</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="eg-footer__bottom">
+      <p>© 2026 EduGuide AI. All rights reserved.</p>
+      <p>Made with <i class="bi bi-heart-fill"></i> for students across Africa.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="eg-back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<div class="eg-toasts" id="egToasts" aria-live="polite" aria-atomic="true"></div>
+
+<!-- Shared scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/components.js"></script>
+<!-- Landing page -->
+<script src="assets/js/landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* ============================================================
+   EduGuide AI — Base Reset + Element Styles (Phase 1)
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--eg-font-body);
+  font-size: var(--eg-fs-base);
+  line-height: 1.55;
+  color: var(--eg-text);
+  background: var(--eg-bg-page);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--eg-font-display);
+  font-weight: 700;
+  color: var(--eg-primary-navy);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--eg-primary-purple);
+  text-decoration: none;
+  transition: color var(--eg-dur-1) var(--eg-ease-out);
+}
+a:hover { color: var(--eg-primary-hover); }
+
+img, svg { display: block; max-width: 100%; }
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button { cursor: pointer; }
+
+ul, ol { padding-left: 1.25em; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: .9em;
+  padding: 2px 6px;
+  background: var(--eg-bg-muted);
+  border-radius: var(--eg-radius-xs);
+  color: var(--eg-primary-purple);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--eg-border);
+  margin: var(--eg-sp-6) 0;
+}
+
+/* ---------- Container ---------- */
+.eg-container {
+  width: 100%;
+  max-width: var(--eg-container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 575.98px) {
+  .eg-container { padding: 0 16px; }
+}
+
+/* ---------- Gradient text ---------- */
+.eg-gradient-text {
+  background: var(--eg-gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* ---------- Eyebrow ---------- */
+.eg-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-family: var(--eg-font-body);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--eg-primary-purple);
+  background: #EDE8FF;
+  border-radius: var(--eg-radius-full);
+  border: 1px solid transparent;
+}
+.eg-eyebrow i { font-size: .9rem; }
+
+.eg-eyebrow--light {
+  background: rgba(255, 255, 255, .12);
+  border-color: rgba(255, 255, 255, .2);
+  color: #fff;
+}
+
+/* ---------- Utilities ---------- */
+.eg-text-muted { color: var(--eg-text-muted); }
+.eg-text-soft  { color: var(--eg-text-soft); }
+.eg-text-center{ text-align: center; }
+
+.eg-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.eg-label-lg {
+  font-family: var(--eg-font-display);
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--eg-text-muted);
+  margin: 0;
+}
+
+.eg-help {
+  display: block;
+  font-size: .78rem;
+  color: var(--eg-text-muted);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+.eg-help--success { color: var(--eg-success); }
+.eg-help--danger  { color: var(--eg-danger); }
+.eg-help i { margin-right: 3px; }
+
+.req { color: var(--eg-danger); }
+
+/* ---------- Reveal (used across all pages) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--eg-dur-4) var(--eg-ease-out),
+              transform var(--eg-dur-4) var(--eg-ease-out);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

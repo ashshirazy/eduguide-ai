@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Software Engineer — Career Details | EduGuide AI</title>
+<meta name="description" content="Full career details for Software Engineer: overview, responsibilities, qualifications, skills, roadmap and more." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/animations.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/dashboard-shell.css" />
+<link rel="stylesheet" href="assets/css/career-details.css" />
+</head>
+<body class="dash-body">
+
+<a href="#cdContent" class="eg-skip-link">Skip to career details</a>
+
+<div class="dash-sidebar__backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="dash-layout">
+
+  <!-- ============================================================
+       SIDEBAR
+       ============================================================ -->
+  <aside class="dash-sidebar" id="dashSidebar" aria-label="Main navigation">
+    <div class="dash-sidebar__head">
+      <a class="eg-logo" href="index.html" aria-label="EduGuide AI home">
+        <span class="eg-logo__mark">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <defs>
+              <linearGradient id="lgCD" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#7B5CFF" />
+                <stop offset="100%" stop-color="#2EA8FF" />
+              </linearGradient>
+            </defs>
+            <rect width="48" height="48" rx="14" fill="url(#lgCD)" />
+            <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+            <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                  fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+            <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+          </svg>
+        </span>
+        <span class="eg-logo__word">EduGuide<span class="eg-logo__ai">AI</span></span>
+      </a>
+      <button class="dash-sidebar__close" id="sidebarClose" aria-label="Close menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <nav class="dash-nav" aria-label="Primary">
+      <p class="dash-nav__heading">Main</p>
+      <a href="dashboard.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-grid-1x2"></i></span>
+        <span class="dash-nav__label">Overview</span>
+      </a>
+      <a href="profile.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-person"></i></span>
+        <span class="dash-nav__label">My Profile</span>
+      </a>
+      <a href="assessment.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-clipboard2-pulse"></i></span>
+        <span class="dash-nav__label">Career Assessment</span>
+        <span class="dash-nav__badge">100%</span>
+      </a>
+      <a href="recommendations.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-stars"></i></span>
+        <span class="dash-nav__label">Recommendations</span>
+        <span class="dash-nav__badge dash-nav__badge--accent">12</span>
+      </a>
+
+      <p class="dash-nav__heading">Explore</p>
+      <a href="explore.html" class="dash-nav__item is-active">
+        <span class="dash-nav__icon"><i class="bi bi-compass"></i></span>
+        <span class="dash-nav__label">Explore Careers</span>
+      </a>
+      <a href="saved.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-bookmark"></i></span>
+        <span class="dash-nav__label">Saved Careers</span>
+      </a>
+      <a href="roadmap.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-signpost-split"></i></span>
+        <span class="dash-nav__label">Learning Roadmap</span>
+      </a>
+      <a href="resources.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-collection-play"></i></span>
+        <span class="dash-nav__label">Resources</span>
+      </a>
+
+      <p class="dash-nav__heading">Account</p>
+      <a href="settings.html" class="dash-nav__item">
+        <span class="dash-nav__icon"><i class="bi bi-gear"></i></span>
+        <span class="dash-nav__label">Settings</span>
+      </a>
+      <a href="login.html" class="dash-nav__item dash-nav__item--danger">
+        <span class="dash-nav__icon"><i class="bi bi-box-arrow-right"></i></span>
+        <span class="dash-nav__label">Logout</span>
+      </a>
+    </nav>
+
+    <div class="dash-sidebar__promo">
+      <div class="dash-sidebar__promo-icon"><i class="bi bi-rocket-takeoff"></i></div>
+      <p class="dash-sidebar__promo-title">Unlock Premium</p>
+      <p class="dash-sidebar__promo-text">Mentor sessions, certifications &amp; more.</p>
+      <button class="eg-btn eg-btn--light eg-btn--sm eg-btn--block" data-eg-toast="Premium upgrade coming soon ✨">
+        Upgrade
+      </button>
+    </div>
+
+    <div class="dash-user">
+      <span class="dash-avatar dash-avatar--lg" style="--c:#7B5CFF">AO</span>
+      <div class="dash-user__info">
+        <span class="dash-user__name">Amara Okafor</span>
+        <span class="dash-user__role">Undergraduate · 300L</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <div class="dash-main">
+
+    <!-- ---------- TOPBAR ---------- -->
+    <header class="dash-topbar">
+      <div class="dash-topbar__left">
+        <button class="dash-topbar__menu" id="sidebarToggle" aria-label="Open menu" aria-controls="dashSidebar" aria-expanded="false">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="dash-topbar__search">
+          <i class="bi bi-search"></i>
+          <input type="search" id="topSearch" placeholder="Search careers, skills, resources…" aria-label="Search" />
+          <kbd class="dash-topbar__kbd">⌘K</kbd>
+        </div>
+      </div>
+
+      <div class="dash-topbar__right">
+        <button class="dash-topbar__icon-btn d-none d-sm-flex" data-eg-toast="You're all caught up on messages ✉️" aria-label="Messages">
+          <i class="bi bi-chat-dots"></i>
+        </button>
+        <div class="dash-dropdown" data-eg-dd>
+          <button class="dash-topbar__icon-btn dash-topbar__icon-btn--notify" data-eg-dd-toggle aria-label="Notifications">
+            <i class="bi bi-bell"></i>
+            <span class="dash-topbar__dot"></span>
+          </button>
+          <div class="dash-dropdown__menu dash-dropdown__menu--wide">
+            <div class="dash-dropdown__head">
+              <strong>Notifications</strong>
+              <button class="dash-dropdown__mark" data-eg-toast="Marked all as read">Mark all read</button>
+            </div>
+            <div class="dash-notif">
+              <span class="dash-notif__icon dash-notif__icon--success"><i class="bi bi-check2-circle"></i></span>
+              <div>
+                <p class="dash-notif__title">You completed Module 5 — keep going!</p>
+                <p class="dash-notif__time">10 minutes ago</p>
+              </div>
+            </div>
+            <a href="#" class="dash-dropdown__footer">View all notifications</a>
+          </div>
+        </div>
+        <div class="dash-dropdown" data-eg-dd>
+          <button class="dash-topbar__profile" data-eg-dd-toggle aria-label="Profile menu">
+            <span class="dash-avatar" style="--c:#7B5CFF">AO</span>
+            <span class="dash-topbar__profile-name d-none d-md-inline">Amara O.</span>
+            <i class="bi bi-chevron-down d-none d-md-inline"></i>
+          </button>
+          <div class="dash-dropdown__menu">
+            <div class="dash-dropdown__head dash-dropdown__head--profile">
+              <span class="dash-avatar dash-avatar--lg" style="--c:#7B5CFF">AO</span>
+              <div>
+                <p class="dash-dropdown__name">Amara Okafor</p>
+                <p class="dash-dropdown__email">amara@school.edu</p>
+              </div>
+            </div>
+            <a href="profile.html" class="dash-dropdown__item"><i class="bi bi-person"></i> My Profile</a>
+            <a href="settings.html" class="dash-dropdown__item"><i class="bi bi-gear"></i> Settings</a>
+            <a href="saved.html" class="dash-dropdown__item"><i class="bi bi-bookmark"></i> Saved Careers</a>
+            <div class="dash-dropdown__sep"></div>
+            <a href="login.html" class="dash-dropdown__item dash-dropdown__item--danger"><i class="bi bi-box-arrow-right"></i> Sign Out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ---------- CONTENT ---------- -->
+    <main class="dash-content" id="cdContent">
+
+      <!-- ============ BREADCRUMB ============ -->
+      <nav class="cd-breadcrumb reveal" aria-label="Breadcrumb">
+        <a href="explore.html"><i class="bi bi-compass"></i> Explore Careers</a>
+        <i class="bi bi-chevron-right"></i>
+        <a href="explore.html">Technology</a>
+        <i class="bi bi-chevron-right"></i>
+        <span aria-current="page">Software Engineer</span>
+      </nav>
+
+      <!-- ============ HERO ============ -->
+      <section class="cd-hero reveal">
+        <div class="cd-hero__bg" aria-hidden="true">
+          <span class="cd-hero__blob cd-hero__blob--1"></span>
+          <span class="cd-hero__blob cd-hero__blob--2"></span>
+          <span class="cd-hero__grid"></span>
+        </div>
+
+        <div class="cd-hero__inner">
+          <div class="cd-hero__icon">
+            <i class="bi bi-code-slash"></i>
+          </div>
+
+          <div class="cd-hero__body">
+            <div class="cd-hero__eyebrow-row">
+              <span class="cd-hero__cat"><i class="bi bi-cpu"></i> Technology</span>
+              <span class="cd-hero__match"><i class="bi bi-stars"></i> 94% match</span>
+              <span class="cd-hero__tag"><i class="bi bi-fire"></i> Trending</span>
+            </div>
+            <h1 class="cd-hero__title">Software Engineer</h1>
+            <p class="cd-hero__desc">
+              Design, build and maintain software systems that power the apps, tools and platforms
+              people use every single day. The work blends creativity, logic and continuous learning.
+            </p>
+
+            <div class="cd-hero__stats">
+              <div class="cd-hero__stat">
+                <span class="cd-hero__stat-icon cd-hero__stat-icon--purple"><i class="bi bi-mortarboard"></i></span>
+                <div>
+                  <span class="cd-hero__stat-label">Education</span>
+                  <span class="cd-hero__stat-value">B.Sc. Computer Science</span>
+                </div>
+              </div>
+              <div class="cd-hero__stat">
+                <span class="cd-hero__stat-icon cd-hero__stat-icon--sky"><i class="bi bi-cash-coin"></i></span>
+                <div>
+                  <span class="cd-hero__stat-label">Salary Range</span>
+                  <span class="cd-hero__stat-value">₦6M – ₦18M / yr</span>
+                </div>
+              </div>
+              <div class="cd-hero__stat">
+                <span class="cd-hero__stat-icon cd-hero__stat-icon--success"><i class="bi bi-graph-up-arrow"></i></span>
+                <div>
+                  <span class="cd-hero__stat-label">Demand</span>
+                  <span class="cd-hero__stat-value">Very high</span>
+                </div>
+              </div>
+              <div class="cd-hero__stat">
+                <span class="cd-hero__stat-icon cd-hero__stat-icon--warning"><i class="bi bi-clock-history"></i></span>
+                <div>
+                  <span class="cd-hero__stat-label">Time to Entry</span>
+                  <span class="cd-hero__stat-value">3 – 4 years</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cd-hero__actions">
+            <button class="eg-btn eg-btn--primary" id="heroSaveBtn">
+              <i class="bi bi-bookmark"></i> <span>Save career</span>
+            </button>
+            <button class="eg-btn eg-btn--ghost" id="heroShareBtn">
+              <i class="bi bi-share"></i> Share
+            </button>
+            <a href="recommendations.html" class="eg-btn eg-btn--outline">
+              <i class="bi bi-arrow-left"></i> Back to matches
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TABS ============ -->
+      <nav class="cd-tabs reveal" role="tablist" aria-label="Career detail sections">
+        <button class="cd-tab is-active" data-cd-tab="overview" role="tab" aria-selected="true">
+          <i class="bi bi-info-circle"></i> Overview
+        </button>
+        <button class="cd-tab" data-cd-tab="roadmap" role="tab" aria-selected="false">
+          <i class="bi bi-signpost-split"></i> Roadmap
+        </button>
+        <button class="cd-tab" data-cd-tab="resources" role="tab" aria-selected="false">
+          <i class="bi bi-collection-play"></i> Resources
+        </button>
+        <button class="cd-tab" data-cd-tab="similar" role="tab" aria-selected="false">
+          <i class="bi bi-diagram-3"></i> Similar careers
+        </button>
+      </nav>
+
+      <!-- ============================================================
+           OVERVIEW
+           ============================================================ -->
+      <section class="cd-panel is-active" data-cd-panel="overview" role="tabpanel">
+        <div class="cd-layout">
+          <div class="cd-layout__main">
+
+            <!-- Overview -->
+            <article class="cd-card reveal">
+              <div class="cd-card__head">
+                <h2 class="cd-card__title"><i class="bi bi-compass"></i> Overview</h2>
+              </div>
+              <p class="cd-prose">
+                Software engineers are the architects of the digital world. They design, build, test and
+                maintain the software that powers everything from banking apps to learning platforms like
+                EduGuide AI itself. The role rewards curiosity, structured thinking and a genuine love of
+                problem-solving — and it's one of the few careers where continuous learning is baked into
+                the job itself.
+              </p>
+              <p class="cd-prose">
+                In Nigeria and across Africa, demand for skilled engineers is rising faster than supply.
+                Whether you work at a startup, a bank, a global tech company or freelance, the opportunities
+                are broad and the salaries are among the strongest in the economy.
+              </p>
+            </article>
+
+            <!-- Responsibilities -->
+            <article class="cd-card reveal">
+              <div class="cd-card__head">
+                <h2 class="cd-card__title"><i class="bi bi-list-check"></i> Key Responsibilities</h2>
+              </div>
+              <ul class="cd-check-list">
+                <li>
+                  <span class="cd-check-list__icon"><i class="bi bi-check2"></i></span>
+                  <div>Write clean, maintainable and well-tested code</div>
+                </li>
+                <li>
+                  <span class="cd-check-list__icon"><i class="bi bi-check2"></i></span>
+                  <div>Design system architecture and database schemas</div>
+                </li>
+                <li>
+                  <span class="cd-check-list__icon"><i class="bi bi-check2"></i></span>
+                  <div>Collaborate with designers, product managers and QA engineers</div>
+                </li>
+                <li>
+                  <span class="cd-check-list__icon"><i class="bi bi-check2"></i></span>
+                  <div>Review code written by teammates and mentor junior engineers</div>
+                </li>
+                <li>
+                  <span class="cd-check-list__icon"><i class="bi bi-check2"></i></span>
+                  <div>Debug production issues and optimise performance</div>
+                </li>
+                <li>
+                  <span class="cd-check-list__icon"><i class="bi bi-check2"></i></span>
+                  <div>Stay current with new languages, frameworks and tools</div>
+                </li>
+              </ul>
+            </article>
+
+            <!-- Required Skills -->
+            <article class="cd-card reveal">
+              <div class="cd-card__head">
+                <h2 class="cd-card__title"><i class="bi bi-tools"></i> Required Skills</h2>
+              </div>
+              <div class="cd-skill-bars">
+                <div class="cd-skill">
+                  <div class="cd-skill__row">
+                    <span class="cd-skill__name">JavaScript &amp; TypeScript</span>
+                    <span class="cd-skill__pct">90%</span>
+                  </div>
+                  <div class="cd-skill__bar"><span style="width:90%"></span></div>
+                </div>
+                <div class="cd-skill">
+                  <div class="cd-skill__row">
+                    <span class="cd-skill__name">Python / Backend Development</span>
+                    <span class="cd-skill__pct">85%</span>
+                  </div>
+                  <div class="cd-skill__bar"><span style="width:85%"></span></div>
+                </div>
+                <div class="cd-skill">
+                  <div class="cd-skill__row">
+                    <span class="cd-skill__name">Data Structures &amp; Algorithms</span>
+                    <span class="cd-skill__pct">80%</span>
+                  </div>
+                  <div class="cd-skill__bar"><span style="width:80%"></span></div>
+                </div>
+                <div class="cd-skill">
+                  <div class="cd-skill__row">
+                    <span class="cd-skill__name">Git &amp; Version Control</span>
+                    <span class="cd-skill__pct">85%</span>
+                  </div>
+                  <div class="cd-skill__bar"><span style="width:85%"></span></div>
+                </div>
+                <div class="cd-skill">
+                  <div class="cd-skill__row">
+                    <span class="cd-skill__name">Problem Solving &amp; Debugging</span>
+                    <span class="cd-skill__pct">95%</span>
+                  </div>
+                  <div class="cd-skill__bar"><span style="width:95%"></span></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Qualifications & Subjects -->
+            <div class="cd-grid-2">
+              <article class="cd-card reveal">
+                <div class="cd-card__head">
+                  <h2 class="cd-card__title"><i class="bi bi-mortarboard"></i> Qualifications</h2>
+                </div>
+                <div class="cd-info-list">
+                  <div class="cd-info-list__item">
+                    <span class="cd-info-list__label">Minimum Degree</span>
+                    <span class="cd-info-list__value">B.Sc. Computer Science</span>
+                  </div>
+                  <div class="cd-info-list__item">
+                    <span class="cd-info-list__label">Related Fields</span>
+                    <span class="cd-info-list__value">Software Engineering, IT, Mathematics, Physics</span>
+                  </div>
+                  <div class="cd-info-list__item">
+                    <span class="cd-info-list__label">Alternative Paths</span>
+                    <span class="cd-info-list__value">Bootcamps, self-taught + strong portfolio</span>
+                  </div>
+                  <div class="cd-info-list__item">
+                    <span class="cd-info-list__label">Postgraduate (optional)</span>
+                    <span class="cd-info-list__value">M.Sc. Software Engineering, M.Sc. AI</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="cd-card reveal">
+                <div class="cd-card__head">
+                  <h2 class="cd-card__title"><i class="bi bi-book"></i> Relevant Subjects</h2>
+                </div>
+                <div class="cd-chips">
+                  <span class="cd-chip">Mathematics</span>
+                  <span class="cd-chip">Further Mathematics</span>
+                  <span class="cd-chip">Physics</span>
+                  <span class="cd-chip">Computer Science</span>
+                  <span class="cd-chip">English</span>
+                  <span class="cd-chip">Chemistry (optional)</span>
+                </div>
+              </article>
+            </div>
+
+            <!-- Career Progression -->
+            <article class="cd-card reveal">
+              <div class="cd-card__head">
+                <h2 class="cd-card__title"><i class="bi bi-graph-up-arrow"></i> Career Progression</h2>
+              </div>
+              <div class="cd-progression">
+                <div class="cd-progression__stage">
+                  <span class="cd-progression__dot cd-progression__dot--1"></span>
+                  <div>
+                    <h3 class="cd-progression__title">Junior Engineer</h3>
+                    <p class="cd-progression__text">0–2 years · ₦4M – ₦8M</p>
+                  </div>
+                </div>
+                <div class="cd-progression__arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
+                <div class="cd-progression__stage">
+                  <span class="cd-progression__dot cd-progression__dot--2"></span>
+                  <div>
+                    <h3 class="cd-progression__title">Mid-level Engineer</h3>
+                    <p class="cd-progression__text">2–4 years · ₦8M – ₦14M</p>
+                  </div>
+                </div>
+                <div class="cd-progression__arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
+                <div class="cd-progression__stage">
+                  <span class="cd-progression__dot cd-progression__dot--3"></span>
+                  <div>
+                    <h3 class="cd-progression__title">Senior Engineer</h3>
+                    <p class="cd-progression__text">4–7 years · ₦14M – ₦22M</p>
+                  </div>
+                </div>
+                <div class="cd-progression__arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
+                <div class="cd-progression__stage">
+                  <span class="cd-progression__dot cd-progression__dot--4"></span>
+                  <div>
+                    <h3 class="cd-progression__title">Staff / Lead / Principal</h3>
+                    <p class="cd-progression__text">7+ years · ₦22M+</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Employment Opportunities -->
+            <article class="cd-card reveal">
+              <div class="cd-card__head">
+                <h2 class="cd-card__title"><i class="bi bi-buildings"></i> Employment Opportunities</h2>
+              </div>
+              <div class="cd-industries">
+                <div class="cd-industry">
+                  <i class="bi bi-bank"></i>
+                  <strong>Fintech &amp; Banking</strong>
+                  <span>Paystack, Flutterwave, Access Bank</span>
+                </div>
+                <div class="cd-industry">
+                  <i class="bi bi-globe2"></i>
+                  <strong>Global Tech</strong>
+                  <span>Google, Microsoft, Meta (remote)</span>
+                </div>
+                <div class="cd-industry">
+                  <i class="bi bi-rocket"></i>
+                  <strong>Startups</strong>
+                  <span>Early-stage product teams</span>
+                </div>
+                <div class="cd-industry">
+                  <i class="bi bi-building"></i>
+                  <strong>Enterprise &amp; Consulting</strong>
+                  <span>Deloitte, Accenture, Andela</span>
+                </div>
+                <div class="cd-industry">
+                  <i class="bi bi-laptop"></i>
+                  <strong>Freelance / Remote</strong>
+                  <span>Global contracts via Upwork, Toptal</span>
+                </div>
+                <div class="cd-industry">
+                  <i class="bi bi-mortarboard"></i>
+                  <strong>EdTech &amp; Research</strong>
+                  <span>EduGuide AI, universities, labs</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Certifications -->
+            <article class="cd-card reveal">
+              <div class="cd-card__head">
+                <h2 class="cd-card__title"><i class="bi bi-patch-check"></i> Professional Certifications</h2>
+              </div>
+              <div class="cd-certs">
+                <div class="cd-cert">
+                  <span class="cd-cert__icon cd-cert__icon--purple"><i class="bi bi-award"></i></span>
+                  <div>
+                    <strong>AWS Certified Developer</strong>
+                    <span>Amazon Web Services · Intermediate</span>
+                  </div>
+                </div>
+                <div class="cd-cert">
+                  <span class="cd-cert__icon cd-cert__icon--sky"><i class="bi bi-award"></i></span>
+                  <div>
+                    <strong>Google Professional Cloud Developer</strong>
+                    <span>Google Cloud · Intermediate</span>
+                  </div>
+                </div>
+                <div class="cd-cert">
+                  <span class="cd-cert__icon cd-cert__icon--success"><i class="bi bi-award"></i></span>
+                  <div>
+                    <strong>Meta Front-End Developer</strong>
+                    <span>Coursera · Beginner-friendly</span>
+                  </div>
+                </div>
+                <div class="cd-cert">
+                  <span class="cd-cert__icon cd-cert__icon--warning"><i class="bi bi-award"></i></span>
+                  <div>
+                    <strong>Microsoft Azure Fundamentals</strong>
+                    <span>Microsoft · Beginner</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Sticky sidebar -->
+          <aside class="cd-layout__side">
+            <div class="cd-sticky">
+              <div class="cd-mini-card">
+                <p class="cd-mini-card__label">Your roadmap progress</p>
+                <div class="cd-mini-progress">
+                  <svg viewBox="0 0 100 100" class="cd-mini-donut" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="miniGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#7B5CFF" />
+                        <stop offset="100%" stop-color="#2EA8FF" />
+                      </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#EEF2F7" stroke-width="8" />
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="url(#miniGrad)" stroke-width="8"
+                            stroke-linecap="round" transform="rotate(-90 50 50)"
+                            stroke-dasharray="251.3" stroke-dashoffset="251.3"
+                            id="miniDonut" />
+                  </svg>
+                  <div class="cd-mini-donut__center">
+                    <span id="miniPct">0%</span>
+                    <small>complete</small>
+                  </div>
+                </div>
+                <div class="cd-mini-stats">
+                  <div><strong id="miniDone">0</strong><span>Done</span></div>
+                  <div><strong id="miniTotal">0</strong><span>Total</span></div>
+                  <div><strong id="miniHours">~0h</strong><span>To go</span></div>
+                </div>
+                <button class="eg-btn eg-btn--primary eg-btn--block eg-btn--sm" data-cd-goto="roadmap">
+                  <i class="bi bi-signpost-split"></i> Open roadmap
+                </button>
+              </div>
+
+              <div class="cd-mini-card">
+                <p class="cd-mini-card__label">Quick facts</p>
+                <ul class="cd-quick-facts">
+                  <li><i class="bi bi-fire"></i> <span>Demand:</span> Very high</li>
+                  <li><i class="bi bi-clock-history"></i> <span>Duration:</span> 3–4 years</li>
+                  <li><i class="bi bi-laptop"></i> <span>Remote:</span> Yes — very common</li>
+                  <li><i class="bi bi-globe"></i> <span>Global:</span> Highly portable</li>
+                  <li><i class="bi bi-people"></i> <span>Team-based:</span> Yes</li>
+                </ul>
+              </div>
+
+              <div class="cd-mini-card cd-mini-card--cta">
+                <i class="bi bi-stars cd-mini-card__cta-icon"></i>
+                <p class="cd-mini-card__cta-title">Not sure yet?</p>
+                <p class="cd-mini-card__cta-text">Compare this career with 2 others to see the full picture.</p>
+                <a href="recommendations.html" class="eg-btn eg-btn--light eg-btn--sm eg-btn--block">
+                  <i class="bi bi-columns-gap"></i> Compare careers
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           ROADMAP
+           ============================================================ -->
+      <section class="cd-panel" data-cd-panel="roadmap" role="tabpanel">
+        <header class="cd-panel-head reveal">
+          <div>
+            <span class="cd-panel-head__eyebrow"><i class="bi bi-signpost-split"></i> Learning Roadmap</span>
+            <h2 class="cd-panel-head__title">Your path from beginner to professional</h2>
+            <p class="cd-panel-head__lead">
+              Four structured stages, 32 modules. Check off modules as you complete them —
+              your progress is saved automatically.
+            </p>
+          </div>
+          <div class="cd-panel-head__actions">
+            <button class="eg-btn eg-btn--ghost eg-btn--sm" id="expandAllBtn">
+              <i class="bi bi-arrows-expand"></i> Expand all
+            </button>
+            <button class="eg-btn eg-btn--outline eg-btn--sm" id="resetRoadmapBtn">
+              <i class="bi bi-arrow-counterclockwise"></i> Reset
+            </button>
+          </div>
+        </header>
+
+        <div class="cd-roadmap" id="roadmapContainer">
+          <!-- Injected by JS -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+           RESOURCES
+           ============================================================ -->
+      <section class="cd-panel" data-cd-panel="resources" role="tabpanel">
+        <header class="cd-panel-head reveal">
+          <div>
+            <span class="cd-panel-head__eyebrow"><i class="bi bi-collection-play"></i> Learning Resources</span>
+            <h2 class="cd-panel-head__title">Curated resources to accelerate your learning</h2>
+            <p class="cd-panel-head__lead">Hand-picked articles, courses, books and videos for aspiring software engineers.</p>
+          </div>
+          <a href="resources.html" class="eg-btn eg-btn--primary eg-btn--sm">
+            View all resources <i class="bi bi-arrow-right"></i>
+          </a>
+        </header>
+
+        <div class="cd-resources">
+          <article class="cd-resource reveal">
+            <span class="cd-resource__type cd-resource__type--course"><i class="bi bi-play-btn"></i> Course</span>
+            <h3 class="cd-resource__title">CS50: Introduction to Computer Science</h3>
+            <p class="cd-resource__meta">Harvard · edX · Free</p>
+            <p class="cd-resource__desc">The legendary intro course covering algorithms, data structures and programming foundations.</p>
+            <a href="#" class="cd-resource__link">View resource <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="cd-resource reveal">
+            <span class="cd-resource__type cd-resource__type--book"><i class="bi bi-book"></i> Book</span>
+            <h3 class="cd-resource__title">The Pragmatic Programmer</h3>
+            <p class="cd-resource__meta">Hunt &amp; Thomas · 20th Anniversary Edition</p>
+            <p class="cd-resource__desc">A classic guide to building a lasting, thoughtful software engineering career.</p>
+            <a href="#" class="cd-resource__link">View resource <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="cd-resource reveal">
+            <span class="cd-resource__type cd-resource__type--video"><i class="bi bi-camera-video"></i> Video</span>
+            <h3 class="cd-resource__title">System Design Interview Primer</h3>
+            <p class="cd-resource__meta">YouTube · 2h 15m</p>
+            <p class="cd-resource__desc">A practical walkthrough of designing scalable systems for interviews and real projects.</p>
+            <a href="#" class="cd-resource__link">View resource <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="cd-resource reveal">
+            <span class="cd-resource__type cd-resource__type--article"><i class="bi bi-file-text"></i> Article</span>
+            <h3 class="cd-resource__title">How to Build an Impressive Portfolio</h3>
+            <p class="cd-resource__meta">EduGuide AI · 8 min read</p>
+            <p class="cd-resource__desc">Turn small projects into a portfolio that gets you interviews.</p>
+            <a href="#" class="cd-resource__link">View resource <i class="bi bi-arrow-right"></i></a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SIMILAR CAREERS
+           ============================================================ -->
+      <section class="cd-panel" data-cd-panel="similar" role="tabpanel">
+        <header class="cd-panel-head reveal">
+          <div>
+            <span class="cd-panel-head__eyebrow"><i class="bi bi-diagram-3"></i> Similar Careers</span>
+            <h2 class="cd-panel-head__title">Careers you might also love</h2>
+            <p class="cd-panel-head__lead">Roles that share skills, values or interests with Software Engineer.</p>
+          </div>
+        </header>
+
+        <div class="cd-similar">
+          <a href="career-details.html" class="cd-similar-card reveal">
+            <span class="cd-similar-card__icon cd-similar-card__icon--sky"><i class="bi bi-graph-up"></i></span>
+            <div>
+              <h3 class="cd-similar-card__title">Data Scientist</h3>
+              <p class="cd-similar-card__cat">Technology · 89% match</p>
+            </div>
+            <i class="bi bi-arrow-right cd-similar-card__arrow"></i>
+          </a>
+          <a href="career-details.html" class="cd-similar-card reveal">
+            <span class="cd-similar-card__icon cd-similar-card__icon--success"><i class="bi bi-cpu"></i></span>
+            <div>
+              <h3 class="cd-similar-card__title">AI / ML Engineer</h3>
+              <p class="cd-similar-card__cat">Technology · 84% match</p>
+            </div>
+            <i class="bi bi-arrow-right cd-similar-card__arrow"></i>
+          </a>
+          <a href="career-details.html" class="cd-similar-card reveal">
+            <span class="cd-similar-card__icon cd-similar-card__icon--purple"><i class="bi bi-shield-lock"></i></span>
+            <div>
+              <h3 class="cd-similar-card__title">Cybersecurity Analyst</h3>
+              <p class="cd-similar-card__cat">Technology · 79% match</p>
+            </div>
+            <i class="bi bi-arrow-right cd-similar-card__arrow"></i>
+          </a>
+          <a href="career-details.html" class="cd-similar-card reveal">
+            <span class="cd-similar-card__icon cd-similar-card__icon--warning"><i class="bi bi-diagram-3"></i></span>
+            <div>
+              <h3 class="cd-similar-card__title">Product Manager</h3>
+              <p class="cd-similar-card__cat">Business · 74% match</p>
+            </div>
+            <i class="bi bi-arrow-right cd-similar-card__arrow"></i>
+          </a>
+        </div>
+      </section>
+
+      <p class="dash-footer-note">
+        © 2026 EduGuide AI · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Help Centre</a>
+      </p>
+
+    </main>
+  </div>
+</div>
+
+<div class="eg-toasts" id="egToasts" aria-live="polite" aria-atomic="true"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/dashboard-shell.js"></script>
+<script src="assets/js/career-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Design System — EduGuide AI</title>
+<meta name="description" content="EduGuide AI brand identity and design system — the single source of truth for every screen of the platform." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/animations.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/styleguide.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     TOP BAR
+     ============================================================ -->
+<header class="sg-topbar">
+  <div class="eg-container sg-topbar__inner">
+    <a class="eg-logo" href="#top" aria-label="EduGuide AI home">
+      <span class="eg-logo__mark">
+        <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="lgLogoA" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#7B5CFF" />
+              <stop offset="100%" stop-color="#2EA8FF" />
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="14" fill="url(#lgLogoA)" />
+          <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+          <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+          <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+        </svg>
+      </span>
+      <span class="eg-logo__word">EduGuide<span class="eg-logo__ai">AI</span></span>
+    </a>
+
+    <nav class="sg-topbar__nav" aria-label="Design system sections">
+      <a href="#brand">Brand</a>
+      <a href="#colour">Colour</a>
+      <a href="#type">Type</a>
+      <a href="#buttons">Components</a>
+      <a href="#motion">Motion</a>
+    </nav>
+
+    <div class="sg-topbar__actions">
+      <span class="eg-badge eg-badge--soft-primary d-none d-md-inline-flex">
+        <i class="bi bi-layers"></i> Phase 1 / 14
+      </span>
+      <a href="index.html" class="eg-btn eg-btn--outline eg-btn--sm">
+        <i class="bi bi-arrow-left"></i> <span class="d-none d-sm-inline">Back to app</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="sg-hero">
+    <div class="sg-hero__bg" aria-hidden="true">
+      <span class="sg-blob sg-blob--purple"></span>
+      <span class="sg-blob sg-blob--sky"></span>
+      <span class="sg-grid"></span>
+    </div>
+
+    <div class="eg-container sg-hero__inner">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="eg-eyebrow reveal">
+            <i class="bi bi-stars"></i> Brand Identity &amp; Design System · v1.0
+          </span>
+          <h1 class="sg-hero__title reveal" data-delay="1">
+            The visual language of <span class="eg-gradient-text">EduGuide AI</span>
+          </h1>
+          <p class="sg-hero__lead reveal" data-delay="2">
+            One token set, one component library, one motion language — engineered so every screen
+            of the platform feels unmistakably EduGuide. Trustworthy enough for parents,
+            energetic enough for students.
+          </p>
+          <div class="sg-hero__meta reveal" data-delay="3">
+            <span class="eg-chip"><i class="bi bi-palette2"></i> 34 colour tokens</span>
+            <span class="eg-chip"><i class="bi bi-fonts"></i> Poppins + Inter</span>
+            <span class="eg-chip"><i class="bi bi-grid-3x3-gap"></i> 26 components</span>
+            <span class="eg-chip"><i class="bi bi-universal-access"></i> WCAG AA</span>
+          </div>
+          <div class="sg-hero__cta reveal" data-delay="4">
+            <a href="#brand" class="eg-btn eg-btn--primary eg-btn--lg">
+              <i class="bi bi-arrow-down-circle"></i> Explore the system
+            </a>
+            <a href="#motion" class="eg-btn eg-btn--ghost eg-btn--lg">
+              <i class="bi bi-play-circle"></i> See motion rules
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="sg-hero__card reveal" data-delay="2">
+            <div class="sg-hero__card-glow" aria-hidden="true"></div>
+            <div class="sg-hero__logo-lockup">
+              <span class="eg-logo__mark eg-logo__mark--xl eg-anim-float">
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="lgLogoB" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#7B5CFF" />
+                      <stop offset="100%" stop-color="#2EA8FF" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="48" height="48" rx="14" fill="url(#lgLogoB)" />
+                  <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+                  <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                        fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+                  <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+                </svg>
+              </span>
+              <div>
+                <div class="sg-hero__wordmark">EduGuide <span class="eg-gradient-text">AI</span></div>
+                <div class="sg-hero__tagline">Discover Your Potential. Build Your Future.</div>
+              </div>
+            </div>
+
+            <div class="sg-hero__swatches">
+              <span style="--c:#0A1B3D"></span>
+              <span style="--c:#6C4CF1"></span>
+              <span style="--c:#2EA8FF"></span>
+              <span style="--c:#10B981"></span>
+              <span style="--c:#F59E0B"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BODY: RAIL + CONTENT
+       ============================================================ -->
+  <div class="eg-container sg-body">
+    <div class="row g-4 g-xl-5">
+
+      <aside class="col-lg-3">
+        <nav class="sg-rail" aria-label="Section index">
+          <p class="sg-rail__title">Contents</p>
+          <a href="#brand" class="sg-rail__link"><span>01</span> Brand Identity</a>
+          <a href="#colour" class="sg-rail__link"><span>02</span> Colour System</a>
+          <a href="#type" class="sg-rail__link"><span>03</span> Typography</a>
+          <a href="#layout" class="sg-rail__link"><span>04</span> Layout &amp; Elevation</a>
+          <a href="#buttons" class="sg-rail__link"><span>05</span> Buttons</a>
+          <a href="#forms" class="sg-rail__link"><span>06</span> Forms &amp; Inputs</a>
+          <a href="#cards" class="sg-rail__link"><span>07</span> Cards &amp; Stats</a>
+          <a href="#feedback" class="sg-rail__link"><span>08</span> Feedback</a>
+          <a href="#nav" class="sg-rail__link"><span>09</span> Navigation</a>
+          <a href="#overlays" class="sg-rail__link"><span>10</span> Overlays &amp; Data</a>
+          <a href="#motion" class="sg-rail__link"><span>11</span> Motion &amp; A11y</a>
+        </nav>
+      </aside>
+
+      <div class="col-lg-9">
+
+        <!-- ============ 01 BRAND ============ -->
+        <section id="brand" class="sg-section reveal">
+          <header class="sg-section__head">
+            <span class="sg-section__num">01</span>
+            <div>
+              <h2>Brand Identity</h2>
+              <p>The mark, the lockups, and the personality rules that keep EduGuide AI consistent everywhere.</p>
+            </div>
+          </header>
+
+          <div class="eg-card mb-4">
+            <div class="eg-card__body">
+              <p class="eg-label-lg">Primary Lockup</p>
+              <div class="sg-lockup-stage">
+                <div class="eg-logo">
+                  <span class="eg-logo__mark eg-logo__mark--xl">
+                    <svg viewBox="0 0 48 48" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="lgLogoC" x1="0" y1="0" x2="1" y2="1">
+                          <stop offset="0%" stop-color="#7B5CFF" />
+                          <stop offset="100%" stop-color="#2EA8FF" />
+                        </linearGradient>
+                      </defs>
+                      <rect width="48" height="48" rx="14" fill="url(#lgLogoC)" />
+                      <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+                      <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                            fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+                      <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+                    </svg>
+                  </span>
+                  <span class="eg-logo__word">EduGuide<span class="eg-logo__ai">AI</span></span>
+                </div>
+              </div>
+              <p class="eg-help text-center mt-3 mb-0">
+                Minimum clear space = height of the <strong>E</strong> on all sides · Never rotate, recolour, or add effects.
+              </p>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="eg-card eg-card--hover h-100">
+                <div class="eg-card__body">
+                  <p class="eg-label-lg mb-3">On Dark Surface</p>
+                  <div class="sg-lockup-stage sg-lockup-stage--dark">
+                    <div class="eg-logo">
+                      <span class="eg-logo__mark">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                          <defs>
+                            <linearGradient id="lgLogoD" x1="0" y1="0" x2="1" y2="1">
+                              <stop offset="0%" stop-color="#7B5CFF" />
+                              <stop offset="100%" stop-color="#2EA8FF" />
+                            </linearGradient>
+                          </defs>
+                          <rect width="48" height="48" rx="14" fill="url(#lgLogoD)" />
+                          <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+                          <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                                fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+                          <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+                        </svg>
+                      </span>
+                      <span class="eg-logo__word eg-logo__word--light">EduGuide<span class="eg-logo__ai">AI</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="eg-card eg-card--hover h-100">
+                <div class="eg-card__body">
+                  <p class="eg-label-lg mb-3">App Icon / Favicon</p>
+                  <div class="sg-lockup-stage">
+                    <span class="eg-logo__mark eg-logo__mark--lg">
+                      <svg viewBox="0 0 48 48" aria-hidden="true">
+                        <defs>
+                          <linearGradient id="lgLogoE" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#7B5CFF" />
+                            <stop offset="100%" stop-color="#2EA8FF" />
+                          </linearGradient>
+                        </defs>
+                        <rect width="48" height="48" rx="14" fill="url(#lgLogoE)" />
+                        <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+                        <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                              fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+                        <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sg-personality mt-4">
+            <span class="eg-badge eg-badge--soft-secondary">Intelligent</span>
+            <span class="eg-badge eg-badge--soft-secondary">Innovative</span>
+            <span class="eg-badge eg-badge--soft-primary">Trustworthy</span>
+            <span class="eg-badge eg-badge--soft-primary">Educational</span>
+            <span class="eg-badge eg-badge--soft-success">Friendly</span>
+            <span class="eg-badge eg-badge--soft-accent">Modern</span>
+            <span class="eg-badge eg-badge--soft-warning">Professional</span>
+          </div>
+        </section>
+
+        <!-- ============ 02 COLOUR ============ -->
+        <section id="colour" class="sg-section reveal">
+          <header class="sg-section__head">
+            <span class="sg-section__num">02</span>
+            <div>
+              <h2>Colour System</h2>
+              <p>Click any swatch to copy its value. Every pairing shown meets WCAG AA contrast.</p>
+            </div>
+          </header>
+
+          <p class="eg-label-lg">Brand Ramps</p>
+
+          <div class="sg-swatches">
+            <button class="sg-swatch" data-copy="#0A1B3D" style="--c:#0A1B3D">
+              <span class="sg-swatch__chip"></span>
+              <span class="sg-swatch__name">Navy 800</span>
+              <span class="sg-swatch__hex">#0A1B3D</span>
+            </button>
+            <button class="sg-swatch" data-copy="#143063" style="--c:#143063">
+              <span class="sg-swatch__chip"></span>
+              <span class="sg-swatch__name">Navy 600</span>
+              <span class="sg-swatch__hex">#143063</span>
+            </button>
+            <button class="sg-swatch" data-copy="#6C4CF1" style="--c:#6C4CF1">
+              <span class="sg-swatch__chip"></span>
+              <span class="sg-swatch__name">Purple 600</span>
+              <span class="sg-swatch__hex">#6C4CF1</span>
+            </button>
+            <button class="sg-swatch" data-copy="#7B5CFF" style="--c:#7B5CFF">
+              <span class="sg-swatch__chip"></span>
+              <span class="sg-swatch__name">Purple 500</span>
+              <span class="sg-swatch__hex">#7B5CFF</span>
+            </button>
+            <button class="sg-swatch" data-copy="#2EA8FF" style="--c:#2EA8FF">
+              <span class="sg-swatch__chip"></span>
+              <span class="sg-swatch__name">Sky 500</span>
+              <span class="sg-swatch__hex">#2EA8FF</span>
+            </button>
+            <button class="sg-swatch" data-copy="#38BDF8" style="--c:#38BDF8">
+              <span class="sg-swatch__chip"></span>
+              <span class="sg-swatch__name">Sky 400</span>
+              <span class="sg-swatch__hex">#38BDF8</span>
+            </button>
+            <button class="sg-swatch" data-copy="#10B981" style="--c:#10B981">
+              <span class="sg-swatch__chip"></span>
+              <span class="sg-swatch__name">Success 500</span>
+              <span class="sg-swatch__hex">#10B981</span>
+            </button>
+            <button class="sg-swatch" data-copy="#F59E0B" style="--c:#F59E0B">
+              <span class="sg-swatch__chip"></span>
+              <span class="sg-swatch__name">Warning 500</span>
+              <span class="sg-swatch__hex">#F59E0B</span>
+            </button>
+            <button class="sg-swatch" data-copy="#EF4444" style="--c:#EF4444">
+              <span class="sg-swatch__chip"></span>
+              <span class="sg-swatch__name">Danger 500</span>
+              <span class="sg-swatch__hex">#EF4444</span>
+            </button>
+            <button class="sg-swatch" data-copy="#F7F9FC" style="--c:#F7F9FC">
+              <span class="sg-swatch__chip sg-swatch__chip--light"></span>
+              <span class="sg-swatch__name">Gray 50</span>
+              <span class="sg-swatch__hex">#F7F9FC</span>
+            </button>
+            <button class="sg-swatch" data-copy="#64748B" style="--c:#64748B">
+              <span class="sg-swatch__chip"></span>
+              <span class="sg-swatch__name">Gray 500</span>
+              <span class="sg-swatch__hex">#64748B</span>
+            </button>
+            <button class="sg-swatch" data-copy="#FFFFFF" style="--c:#FFFFFF">
+              <span class="sg-swatch__chip sg-swatch__chip--light"></span>
+              <span class="sg-swatch__name">White</span>
+              <span class="sg-swatch__hex">#FFFFFF</span>
+            </button>
+          </div>
+
+          <p class="eg-label-lg mt-4">Gradients</p>
+          <div class="row g-3">
+            <div class="col-sm-6 col-lg-4">
+              <button class="sg-grad" data-copy="linear-gradient(135deg,#6C4CF1,#2EA8FF)" style="--g:linear-gradient(135deg,#6C4CF1,#2EA8FF)">
+                <span>Brand Gradient</span>
+              </button>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <button class="sg-grad" data-copy="linear-gradient(160deg,#0A1B3D,#1C3F7C)" style="--g:linear-gradient(160deg,#0A1B3D,#1C3F7C)">
+                <span>Navy Depth</span>
+              </button>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <button class="sg-grad" data-copy="linear-gradient(135deg,#EDE8FF,#E0F2FE)" style="--g:linear-gradient(135deg,#EDE8FF,#E0F2FE);color:#0A1B3D">
+                <span>Soft Surface</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 03 TYPOGRAPHY ============ -->
+        <section id="type" class="sg-section reveal">
+          <header class="sg-section__head">
+            <span class="sg-section__num">03</span>
+            <div>
+              <h2>Typography</h2>
+              <p>Poppins for expression, Inter for reading. One scale, fluid across every breakpoint.</p>
+            </div>
+          </header>
+
+          <div class="eg-card">
+            <div class="eg-card__body">
+              <div class="sg-type-row">
+                <span class="sg-type-meta">Display / 60 · Poppins 800</span>
+                <p class="sg-type-display">Discover Your Potential.</p>
+              </div>
+              <div class="sg-type-row">
+                <span class="sg-type-meta">H1 / 40 · Poppins 700</span>
+                <p class="sg-type-h1">Build Your Future</p>
+              </div>
+              <div class="sg-type-row">
+                <span class="sg-type-meta">H2 / 30 · Poppins 600</span>
+                <p class="sg-type-h2">Personalised career guidance</p>
+              </div>
+              <div class="sg-type-row">
+                <span class="sg-type-meta">H3 / 24 · Poppins 600</span>
+                <p class="sg-type-h3">Your recommended careers</p>
+              </div>
+              <div class="sg-type-row">
+                <span class="sg-type-meta">Body / 16 · Inter 400</span>
+                <p class="sg-type-body">
+                  EduGuide AI analyses your interests, strengths and academic profile to recommend
+                  career paths that genuinely fit you — then builds a step-by-step roadmap to reach them.
+                </p>
+              </div>
+              <div class="sg-type-row mb-0">
+                <span class="sg-type-meta">Small / 14 · Inter 500 · Muted</span>
+                <p class="eg-text-muted mb-0">
+                  Assessment results are indicative and should be discussed with your school counsellor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 04 LAYOUT ============ -->
+        <section id="layout" class="sg-section reveal">
+          <header class="sg-section__head">
+            <span class="sg-section__num">04</span>
+            <div>
+              <h2>Spacing, Radius &amp; Elevation</h2>
+              <p>A 4px base grid, five radii, five elevation levels. Nothing off-scale, ever.</p>
+            </div>
+          </header>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="eg-card h-100">
+                <div class="eg-card__body">
+                  <p class="eg-label-lg mb-3">Spacing Scale</p>
+                  <div class="sg-space">
+                    <div><span style="--s:4px"></span><code>4</code></div>
+                    <div><span style="--s:8px"></span><code>8</code></div>
+                    <div><span style="--s:12px"></span><code>12</code></div>
+                    <div><span style="--s:16px"></span><code>16</code></div>
+                    <div><span style="--s:24px"></span><code>24</code></div>
+                    <div><span style="--s:32px"></span><code>32</code></div>
+                    <div><span style="--s:48px"></span><code>48</code></div>
+                    <div><span style="--s:64px"></span><code>64</code></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="eg-card h-100">
+                <div class="eg-card__body">
+                  <p class="eg-label-lg mb-3">Radius</p>
+                  <div class="sg-radius">
+                    <div><span style="border-radius:6px"></span><code>6</code></div>
+                    <div><span style="border-radius:10px"></span><code>10</code></div>
+                    <div><span style="border-radius:14px"></span><code>14</code></div>
+                    <div><span style="border-radius:18px"></span><code>18</code></div>
+                    <div><span style="border-radius:999px"></span><code>pill</code></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="eg-card mt-4">
+            <div class="eg-card__body">
+              <p class="eg-label-lg mb-3">Elevation</p>
+              <div class="sg-elev">
+                <div class="sg-elev__item" style="box-shadow:var(--eg-shadow-xs)">XS</div>
+                <div class="sg-elev__item" style="box-shadow:var(--eg-shadow-sm)">SM</div>
+                <div class="sg-elev__item" style="box-shadow:var(--eg-shadow-md)">MD</div>
+                <div class="sg-elev__item" style="box-shadow:var(--eg-shadow-lg)">LG</div>
+                <div class="sg-elev__item" style="box-shadow:var(--eg-shadow-xl)">XL</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 05 BUTTONS ============ -->
+        <section id="buttons" class="sg-section reveal">
+          <header class="sg-section__head">
+            <span class="sg-section__num">05</span>
+            <div>
+              <h2>Buttons</h2>
+              <p>Ripple on click, lift on hover, press-scale on active. Every variant is keyboard-focusable.</p>
+            </div>
+          </header>
+
+          <div class="eg-card">
+            <div class="eg-card__body">
+              <p class="eg-label-lg mb-3">Variants</p>
+              <div class="sg-stack">
+                <button class="eg-btn eg-btn--primary">Primary</button>
+                <button class="eg-btn eg-btn--secondary">Secondary</button>
+                <button class="eg-btn eg-btn--accent">Accent</button>
+                <button class="eg-btn eg-btn--outline">Outline</button>
+                <button class="eg-btn eg-btn--ghost">Ghost</button>
+                <button class="eg-btn eg-btn--success">Success</button>
+                <button class="eg-btn eg-btn--danger">Danger</button>
+                <button class="eg-btn eg-btn--link">Link button <i class="bi bi-arrow-right"></i></button>
+              </div>
+
+              <p class="eg-label-lg mb-3 mt-4">Sizes</p>
+              <div class="sg-stack align-items-center">
+                <button class="eg-btn eg-btn--primary eg-btn--sm">Small</button>
+                <button class="eg-btn eg-btn--primary">Default</button>
+                <button class="eg-btn eg-btn--primary eg-btn--lg">Large</button>
+                <button class="eg-btn eg-btn--outline eg-btn--icon" aria-label="Settings">
+                  <i class="bi bi-gear"></i>
+                </button>
+              </div>
+
+              <p class="eg-label-lg mb-3 mt-4">States</p>
+              <div class="sg-stack">
+                <button class="eg-btn eg-btn--primary">Default</button>
+                <button class="eg-btn eg-btn--primary is-loading">
+                  <span class="eg-spinner"></span> Loading
+                </button>
+                <button class="eg-btn eg-btn--primary" disabled>Disabled</button>
+                <button class="eg-btn eg-btn--primary eg-btn--block">Block button</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 06 FORMS ============ -->
+        <section id="forms" class="sg-section reveal">
+          <header class="sg-section__head">
+            <span class="sg-section__num">06</span>
+            <div>
+              <h2>Forms &amp; Inputs</h2>
+              <p>Real-time validation, password strength, and accessible labels — reused from Phase 3 onward.</p>
+            </div>
+          </header>
+
+          <div class="eg-card">
+            <div class="eg-card__body">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="eg-field">
+                    <label class="eg-label" for="sgName">Full Name <span class="req">*</span></label>
+                    <input id="sgName" class="eg-input" type="text" placeholder="e.g. Amara Okafor" />
+                    <span class="eg-help">As it appears on your school records.</span>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="eg-field">
+                    <label class="eg-label" for="sgEmail">Email Address <span class="req">*</span></label>
+                    <div class="eg-input-group">
+                      <i class="bi bi-envelope eg-input-icon"></i>
+                      <input id="sgEmail" class="eg-input has-icon is-valid" type="email" value="amara@school.edu" />
+                      <i class="bi bi-check-circle-fill eg-input-status"></i>
+                    </div>
+                    <span class="eg-help eg-help--success">Looks good — this email is available.</span>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="eg-field">
+                    <label class="eg-label" for="sgLevel">Educational Level</label>
+                    <select id="sgLevel" class="eg-select">
+                      <option>Secondary School</option>
+                      <option>Undergraduate</option>
+                      <option>Postgraduate</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="eg-field">
+                    <label class="eg-label" for="sgSearch">Search field</label>
+                    <div class="eg-input-group">
+                      <i class="bi bi-search eg-input-icon"></i>
+                      <input id="sgSearch" class="eg-input has-icon" type="search" placeholder="Search careers, skills, resources…" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="eg-field">
+                    <label class="eg-label" for="sgPass">Password</label>
+                    <div class="eg-input-group">
+                      <i class="bi bi-lock eg-input-icon"></i>
+                      <input id="sgPass" class="eg-input has-icon has-trailing" type="password" value="EduGuide2024" />
+                      <button type="button" class="eg-input-action" data-toggle-password aria-label="Show password">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                    <span class="eg-help eg-help--success">Strong password</span>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="eg-field">
+                    <label class="eg-label" for="sgErr">Invalid state</label>
+                    <input id="sgErr" class="eg-input is-invalid" type="text" value="not-an-email" />
+                    <span class="eg-help eg-help--danger"><i class="bi bi-exclamation-circle"></i> Enter a valid email address.</span>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="eg-field">
+                    <label class="eg-label" for="sgMsg">Textarea</label>
+                    <textarea id="sgMsg" class="eg-textarea" rows="3" placeholder="Tell us what you'd like to achieve…"></textarea>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="eg-checks">
+                    <label class="eg-check">
+                      <input type="checkbox" checked />
+                      <span class="eg-check__box"><i class="bi bi-check"></i></span>
+                      <span>I agree to the Terms &amp; Conditions</span>
+                    </label>
+                    <label class="eg-check">
+                      <input type="checkbox" />
+                      <span class="eg-check__box"><i class="bi bi-check"></i></span>
+                      <span>Send me career tips by email</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="eg-radios">
+                    <label class="eg-radio">
+                      <input type="radio" name="sgRadio" checked />
+                      <span class="eg-radio__dot"></span>
+                      <span>Secondary School</span>
+                    </label>
+                    <label class="eg-radio">
+                      <input type="radio" name="sgRadio" />
+                      <span class="eg-radio__dot"></span>
+                      <span>Undergraduate</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="sg-stack">
+                    <label class="eg-switch">
+                      <input type="checkbox" checked />
+                      <span class="eg-switch__track"><span class="eg-switch__thumb"></span></span>
+                      <span class="eg-switch__label">Email notifications</span>
+                    </label>
+                    <label class="eg-switch">
+                      <input type="checkbox" />
+                      <span class="eg-switch__track"><span class="eg-switch__thumb"></span></span>
+                      <span class="eg-switch__label">Dark mode (coming soon)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 07 CARDS ============ -->
+        <section id="cards" class="sg-section reveal">
+          <header class="sg-section__head">
+            <span class="sg-section__num">07</span>
+            <div>
+              <h2>Cards &amp; Statistics</h2>
+              <p>The dashboard building blocks — hover-lift, gradient iconography, animated counters.</p>
+            </div>
+          </header>
+
+          <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+              <div class="eg-card eg-card--hover h-100">
+                <div class="eg-card__body">
+                  <div class="eg-stat__icon eg-stat__icon--purple mb-3"><i class="bi bi-clipboard2-check"></i></div>
+                  <p class="sg-type-h2 mb-1">82%</p>
+                  <p class="eg-text-muted mb-0">Assessment complete</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="eg-card eg-card--hover h-100">
+                <div class="eg-card__body">
+                  <div class="eg-stat__icon eg-stat__icon--sky mb-3"><i class="bi bi-briefcase"></i></div>
+                  <p class="sg-type-h2 mb-1">12</p>
+                  <p class="eg-text-muted mb-0">Career matches</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="eg-card eg-card--hover h-100">
+                <div class="eg-card__body">
+                  <div class="eg-stat__icon eg-stat__icon--success mb-3"><i class="bi bi-bookmark-heart"></i></div>
+                  <p class="sg-type-h2 mb-1">7</p>
+                  <p class="eg-text-muted mb-0">Saved careers</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="eg-card eg-card--hover h-100">
+                <div class="eg-card__body">
+                  <div class="eg-stat__icon eg-stat__icon--warning mb-3"><i class="bi bi-fire"></i></div>
+                  <p class="sg-type-h2 mb-1">14</p>
+                  <p class="eg-text-muted mb-0">Day streak</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-1">
+            <div class="col-md-6">
+              <div class="eg-card eg-card--hover h-100">
+                <div class="eg-card__body">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <span class="eg-badge eg-badge--soft-accent">Technology</span>
+                    <span class="eg-badge eg-badge--soft-success">94% match</span>
+                  </div>
+                  <h3 class="eg-card__title">Software Engineer</h3>
+                  <p class="eg-card__text">
+                    Design, build and maintain software systems used by millions of people worldwide.
+                  </p>
+                  <div class="eg-card__meta">
+                    <span><i class="bi bi-mortarboard"></i> B.Sc. Computer Science</span>
+                    <span><i class="bi bi-code-slash"></i> JavaScript, Python</span>
+                  </div>
+                  <div class="eg-card__footer">
+                    <button class="eg-btn eg-btn--outline eg-btn--sm"><i class="bi bi-bookmark"></i> Save</button>
+                    <button class="eg-btn eg-btn--primary eg-btn--sm">View details <i class="bi bi-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="eg-card eg-card--hover h-100">
+                <div class="eg-card__body">
+                  <p class="eg-label-lg mb-2">Learning roadmap</p>
+                  <div class="sg-progress-row">
+                    <span>Beginner</span><span class="eg-text-muted">100%</span>
+                  </div>
+                  <div class="eg-progress mb-3"><div class="eg-progress__bar" style="width:100%"></div></div>
+                  <div class="sg-progress-row">
+                    <span>Intermediate</span><span class="eg-text-muted">65%</span>
+                  </div>
+                  <div class="eg-progress eg-progress--accent mb-3"><div class="eg-progress__bar" style="width:65%"></div></div>
+                  <div class="sg-progress-row">
+                    <span>Advanced</span><span class="eg-text-muted">20%</span>
+                  </div>
+                  <div class="eg-progress eg-progress--success"><div class="eg-progress__bar" style="width:20%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 08 FEEDBACK ============ -->
+        <section id="feedback" class="sg-section reveal">
+          <header class="sg-section__head">
+            <span class="sg-section__num">08</span>
+            <div>
+              <h2>Badges, Alerts &amp; Progress</h2>
+              <p>Status communicates with colour + icon + text — never colour alone.</p>
+            </div>
+          </header>
+
+          <div class="eg-card mb-4">
+            <div class="eg-card__body">
+              <p class="eg-label-lg mb-3">Badges</p>
+              <div class="sg-stack">
+                <span class="eg-badge eg-badge--primary">Primary</span>
+                <span class="eg-badge eg-badge--secondary">Secondary</span>
+                <span class="eg-badge eg-badge--accent">Accent</span>
+                <span class="eg-badge eg-badge--success"><i class="bi bi-check-circle"></i> Completed</span>
+                <span class="eg-badge eg-badge--warning"><i class="bi bi-clock"></i> In progress</span>
+                <span class="eg-badge eg-badge--danger"><i class="bi bi-x-circle"></i> Missed</span>
+                <span class="eg-badge eg-badge--soft-primary">Soft primary</span>
+                <span class="eg-badge eg-badge--soft-success">Soft success</span>
+                <span class="eg-badge eg-badge--outline">Outline</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <div class="eg-alert eg-alert--success">
+                <i class="bi bi-check-circle-fill"></i>
+                <div><strong>Assessment submitted.</strong> Your results are ready to view.</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="eg-alert eg-alert--info">
+                <i class="bi bi-info-circle-fill"></i>
+                <div><strong>New careers added.</strong> 6 careers matched your profile today.</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="eg-alert eg-alert--warning">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+                <div><strong>Profile incomplete.</strong> Add your academic level to improve matches.</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="eg-alert eg-alert--danger">
+                <i class="bi bi-x-octagon-fill"></i>
+                <div><strong>Upload failed.</strong> File must be under 5MB.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="eg-card">
+            <div class="eg-card__body">
+              <p class="eg-label-lg mb-3">Progress &amp; Achievement</p>
+              <div class="row g-4 align-items-center">
+                <div class="col-md-7">
+                  <div class="eg-progress mb-3"><div class="eg-progress__bar" style="width:72%"></div></div>
+                  <div class="eg-progress eg-progress--sm mb-3"><div class="eg-progress__bar" style="width:45%"></div></div>
+                  <div class="eg-progress eg-progress--accent mb-3"><div class="eg-progress__bar" style="width:88%"></div></div>
+                  <div class="eg-progress eg-progress--warning mb-0"><div class="eg-progress__bar" style="width:30%"></div></div>
+                </div>
+                <div class="col-md-5">
+                  <div class="sg-badges">
+                    <div class="sg-badge-ach"><i class="bi bi-award-fill"></i><span>First Steps</span></div>
+                    <div class="sg-badge-ach sg-badge-ach--locked"><i class="bi bi-lock-fill"></i><span>Explorer</span></div>
+                    <div class="sg-badge-ach"><i class="bi bi-lightning-charge-fill"></i><span>7-Day Streak</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 09 NAVIGATION ============ -->
+        <section id="nav" class="sg-section reveal">
+          <header class="sg-section__head">
+            <span class="sg-section__num">09</span>
+            <div>
+              <h2>Navigation</h2>
+              <p>Public navbar and authenticated sidebar — the two shells every screen will live inside.</p>
+            </div>
+          </header>
+
+          <p class="eg-label-lg">Public Navbar</p>
+          <div class="sg-navbar-preview mb-4">
+            <div class="eg-logo">
+              <span class="eg-logo__mark">
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="lgLogoF" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#7B5CFF" />
+                      <stop offset="100%" stop-color="#2EA8FF" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="48" height="48" rx="14" fill="url(#lgLogoF)" />
+                  <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+                  <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1"
+                        fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+                  <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+                </svg>
+              </span>
+              <span class="eg-logo__word">EduGuide<span class="eg-logo__ai">AI</span></span>
+            </div>
+            <div class="sg-navbar-preview__links">
+              <a class="is-active" href="#nav">Home</a>
+              <a href="#nav">Explore Careers</a>
+              <a href="#nav">How It Works</a>
+              <a href="#nav">About</a>
+              <a href="#nav">Contact</a>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="eg-btn eg-btn--ghost eg-btn--sm">Login</button>
+              <button class="eg-btn eg-btn--primary eg-btn--sm">Get Started</button>
+            </div>
+          </div>
+
+          <p class="eg-label-lg">Dashboard Sidebar</p>
+          <div class="eg-card">
+            <div class="eg-card__body p-0">
+              <div class="sg-sidebar-preview">
+                <a class="sg-sidebar-preview__item is-active"><i class="bi bi-grid-1x2"></i> Overview</a>
+                <a class="sg-sidebar-preview__item"><i class="bi bi-person"></i> My Profile</a>
+                <a class="sg-sidebar-preview__item"><i class="bi bi-clipboard2-pulse"></i> Career Assessment</a>
+                <a class="sg-sidebar-preview__item"><i class="bi bi-stars"></i> Recommendations
+                  <span class="eg-badge eg-badge--primary ms-auto">12</span>
+                </a>
+                <a class="sg-sidebar-preview__item"><i class="bi bi-compass"></i> Explore Careers</a>
+                <a class="sg-sidebar-preview__item"><i class="bi bi-bookmark"></i> Saved Careers</a>
+                <a class="sg-sidebar-preview__item"><i class="bi bi-signpost-split"></i> Learning Roadmap</a>
+                <a class="sg-sidebar-preview__item"><i class="bi bi-collection-play"></i> Resources</a>
+                <a class="sg-sidebar-preview__item"><i class="bi bi-gear"></i> Settings</a>
+                <a class="sg-sidebar-preview__item sg-sidebar-preview__item--danger"><i class="bi bi-box-arrow-right"></i> Logout</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 10 OVERLAYS ============ -->
+        <section id="overlays" class="sg-section reveal">
+          <header class="sg-section__head">
+            <span class="sg-section__num">10</span>
+            <div>
+              <h2>Overlays &amp; Data Display</h2>
+              <p>Modals, dropdowns, tooltips, tabs, accordions and tables — fully interactive.</p>
+            </div>
+          </header>
+
+          <div class="eg-card mb-4">
+            <div class="eg-card__body">
+              <p class="eg-label-lg mb-3">Interactive primitives</p>
+              <div class="sg-stack">
+                <button class="eg-btn eg-btn--primary" data-eg-modal="sgModal">
+                  <i class="bi bi-window-stack"></i> Open modal
+                </button>
+                <button class="eg-btn eg-btn--outline" data-eg-toast="Career saved to your profile ✅">
+                  <i class="bi bi-bell"></i> Trigger toast
+                </button>
+
+                <div class="eg-dropdown" data-eg-dropdown>
+                  <button class="eg-btn eg-btn--ghost" data-eg-dropdown-toggle>
+                    <i class="bi bi-funnel"></i> Sort by <i class="bi bi-chevron-down"></i>
+                  </button>
+                  <div class="eg-dropdown__menu">
+                    <button class="eg-dropdown__item is-active"><i class="bi bi-check2"></i> Best match</button>
+                    <button class="eg-dropdown__item">Highest salary</button>
+                    <button class="eg-dropdown__item">Shortest path</button>
+                    <button class="eg-dropdown__item">Most in demand</button>
+                  </div>
+                </div>
+
+                <span class="eg-tip" data-tip="Compatibility is calculated from your assessment answers.">
+                  <button class="eg-btn eg-btn--ghost"><i class="bi bi-question-circle"></i> Tooltip</button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="eg-card mb-4">
+            <div class="eg-card__body">
+              <p class="eg-label-lg mb-3">Tabs</p>
+              <div class="eg-tabs" data-eg-tabs>
+                <button class="eg-tab is-active" data-eg-tab="t1">Overview</button>
+                <button class="eg-tab" data-eg-tab="t2">Requirements</button>
+                <button class="eg-tab" data-eg-tab="t3">Skills</button>
+              </div>
+              <div class="eg-tab-panel is-active" data-eg-panel="t1">
+                <p class="mb-0">Software engineers design and build the applications people use every day, from banking apps to learning platforms.</p>
+              </div>
+              <div class="eg-tab-panel" data-eg-panel="t2">
+                <p class="mb-0">Typically a B.Sc. in Computer Science or a related field, plus a strong portfolio of practical projects.</p>
+              </div>
+              <div class="eg-tab-panel" data-eg-panel="t3">
+                <p class="mb-0">Problem solving, JavaScript, Python, data structures, teamwork and continuous learning.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="eg-card mb-4">
+            <div class="eg-card__body">
+              <p class="eg-label-lg mb-3">Accordion (FAQ pattern)</p>
+              <div class="eg-accordion" data-eg-accordion>
+                <div class="eg-accordion__item is-open">
+                  <button class="eg-accordion__head">Is EduGuide AI free for students? <i class="bi bi-plus-lg"></i></button>
+                  <div class="eg-accordion__body"><p class="mb-0">Yes — the core assessment and career explorer are free. Premium adds mentor sessions and certification tracks.</p></div>
+                </div>
+                <div class="eg-accordion__item">
+                  <button class="eg-accordion__head">How accurate are the recommendations? <i class="bi bi-plus-lg"></i></button>
+                  <div class="eg-accordion__body"><p class="mb-0">Recommendations are generated from your assessment profile and are best used as a starting point for exploration with a counsellor.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="eg-card">
+            <div class="eg-card__body p-0">
+              <div class="table-responsive">
+                <table class="eg-table">
+                  <thead>
+                    <tr>
+                      <th>Career</th>
+                      <th>Category</th>
+                      <th>Match</th>
+                      <th>Status</th>
+                      <th class="text-end">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Software Engineer</strong></td>
+                      <td>Technology</td>
+                      <td><span class="eg-badge eg-badge--soft-success">94%</span></td>
+                      <td><span class="eg-badge eg-badge--success">Recommended</span></td>
+                      <td class="text-end"><button class="eg-btn eg-btn--ghost eg-btn--sm">View</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Data Scientist</strong></td>
+                      <td>Technology</td>
+                      <td><span class="eg-badge eg-badge--soft-success">89%</span></td>
+                      <td><span class="eg-badge eg-badge--warning">Exploring</span></td>
+                      <td class="text-end"><button class="eg-btn eg-btn--ghost eg-btn--sm">View</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Medical Doctor</strong></td>
+                      <td>Healthcare</td>
+                      <td><span class="eg-badge eg-badge--soft-primary">76%</span></td>
+                      <td><span class="eg-badge eg-badge--outline">Saved</span></td>
+                      <td class="text-end"><button class="eg-btn eg-btn--ghost eg-btn--sm">View</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 11 MOTION ============ -->
+        <section id="motion" class="sg-section reveal">
+          <header class="sg-section__head">
+            <span class="sg-section__num">11</span>
+            <div>
+              <h2>Motion &amp; Accessibility</h2>
+              <p>Motion explains, never decorates for its own sake — and it fully respects reduced-motion preferences.</p>
+            </div>
+          </header>
+
+          <div class="eg-card mb-4">
+            <div class="eg-card__body">
+              <p class="eg-label-lg mb-3">Motion Tokens</p>
+              <div class="table-responsive">
+                <table class="eg-table">
+                  <thead>
+                    <tr><th>Token</th><th>Value</th><th>Used for</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><code>--eg-dur-1</code></td><td>120ms</td><td>Hover, colour changes</td></tr>
+                    <tr><td><code>--eg-dur-2</code></td><td>200ms</td><td>Buttons, dropdowns, tooltips</td></tr>
+                    <tr><td><code>--eg-dur-3</code></td><td>320ms</td><td>Cards, tabs, sidebar</td></tr>
+                    <tr><td><code>--eg-dur-4</code></td><td>500ms</td><td>Reveal on scroll, modals</td></tr>
+                    <tr><td><code>--eg-dur-5</code></td><td>800ms</td><td>Progress bars, counters</td></tr>
+                    <tr><td><code>--eg-ease-out</code></td><td>cubic-bezier(.22,1,.36,1)</td><td>Entrances, default</td></tr>
+                    <tr><td><code>--eg-ease-spring</code></td><td>cubic-bezier(.34,1.56,.64,1)</td><td>Playful confirmation</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="eg-card h-100">
+                <div class="eg-card__body">
+                  <p class="eg-label-lg mb-3">Live demos</p>
+                  <div class="sg-motion-demo">
+                    <span class="eg-anim-float"><i class="bi bi-stars"></i></span>
+                    <span class="eg-anim-pulse"><i class="bi bi-heart-pulse"></i></span>
+                    <span class="eg-anim-spin"><i class="bi bi-arrow-repeat"></i></span>
+                  </div>
+                  <p class="eg-help mb-0">Hover the floating icon, watch the pulse and spinner loops.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="eg-card h-100">
+                <div class="eg-card__body">
+                  <p class="eg-label-lg mb-3">Accessibility rules</p>
+                  <ul class="sg-list">
+                    <li><i class="bi bi-check2-circle"></i> Minimum 4.5:1 contrast for body text</li>
+                    <li><i class="bi bi-check2-circle"></i> Visible focus ring on every interactive element</li>
+                    <li><i class="bi bi-check2-circle"></i> Status never communicated by colour alone</li>
+                    <li><i class="bi bi-check2-circle"></i> All icons paired with text or <code>aria-label</code></li>
+                    <li><i class="bi bi-check2-circle"></i> <code>prefers-reduced-motion</code> disables all animation</li>
+                    <li><i class="bi bi-check2-circle"></i> Touch targets ≥ 44×44px</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ============================================================
+     MODAL
+     ============================================================ -->
+<div class="eg-modal" id="sgModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="sgModalTitle">
+  <div class="eg-modal__backdrop" data-eg-modal-close></div>
+  <div class="eg-modal__dialog">
+    <div class="eg-modal__header">
+      <div class="d-flex align-items-center gap-3">
+        <span class="eg-stat__icon eg-stat__icon--purple"><i class="bi bi-stars"></i></span>
+        <div>
+          <h3 class="eg-modal__title" id="sgModalTitle">Your results are ready</h3>
+          <p class="eg-modal__subtitle mb-0">12 careers matched your profile</p>
+        </div>
+      </div>
+      <button class="eg-modal__close" data-eg-modal-close aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="eg-modal__body">
+      <p>Based on your interests, strengths and academic profile, we've identified careers with the
+        highest compatibility. You can save, compare or download the full report.</p>
+      <div class="eg-progress"><div class="eg-progress__bar" style="width:94%"></div></div>
+      <p class="eg-help mt-2">Top match: <strong>Software Engineer — 94%</strong></p>
+    </div>
+    <div class="eg-modal__footer">
+      <button class="eg-btn eg-btn--ghost" data-eg-modal-close>Maybe later</button>
+      <button class="eg-btn eg-btn--primary" data-eg-modal-close data-eg-toast="Report downloaded 📄">View recommendations</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div class="eg-toasts" id="egToasts" aria-live="polite" aria-atomic="true"></div>
+
+<footer class="sg-footer">
+  <div class="eg-container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="mb-0">© 2026 EduGuide AI — Design System v1.0</p>
+    <p class="mb-0 eg-text-muted">Phase 1 of 14 · <a href="index.html">Back to landing page</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/styleguide.js"></script>
+</body>
+</html>

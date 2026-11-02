@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Settings — EduGuide AI</title>
+<meta name="description" content="Manage your EduGuide AI account preferences, notifications, privacy and security." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/animations.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/dashboard-shell.css" />
+<link rel="stylesheet" href="assets/css/pages-extra.css" />
+</head>
+<body class="dash-body">
+
+<a href="#settingsContent" class="eg-skip-link">Skip to content</a>
+
+<div class="dash-sidebar__backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="dash-layout">
+
+  <aside class="dash-sidebar" id="dashSidebar" aria-label="Main navigation">
+    <div class="dash-sidebar__head">
+      <a class="eg-logo" href="index.html" aria-label="EduGuide AI home">
+        <span class="eg-logo__mark">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <defs><linearGradient id="lgSet" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B5CFF" /><stop offset="100%" stop-color="#2EA8FF" /></linearGradient></defs>
+            <rect width="48" height="48" rx="14" fill="url(#lgSet)" />
+            <path d="M24 11.5 38 18.2 24 24.9 10 18.2z" fill="#fff" />
+            <path d="M15.2 21.6v6.1c0 3.3 3.9 5.6 8.8 5.6s8.8-2.3 8.8-5.6v-6.1" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92" />
+            <circle cx="38.5" cy="30.5" r="2.6" fill="#fff" opacity=".85" />
+          </svg>
+        </span>
+        <span class="eg-logo__word">EduGuide<span class="eg-logo__ai">AI</span></span>
+      </a>
+      <button class="dash-sidebar__close" id="sidebarClose" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+    </div>
+
+    <nav class="dash-nav" aria-label="Primary">
+      <p class="dash-nav__heading">Main</p>
+      <a href="dashboard.html" class="dash-nav__item"><span class="dash-nav__icon"><i class="bi bi-grid-1x2"></i></span><span class="dash-nav__label">Overview</span></a>
+      <a href="profile.html" class="dash-nav__item"><span class="dash-nav__icon"><i class="bi bi-person"></i></span><span class="dash-nav__label">My Profile</span></a>
+      <a href="assessment.html" class="dash-nav__item"><span class="dash-nav__icon"><i class="bi bi-clipboard2-pulse"></i></span><span class="dash-nav__label">Career Assessment</span><span class="dash-nav__badge">100%</span></a>
+      <a href="recommendations.html" class="dash-nav__item"><span class="dash-nav__icon"><i class="bi bi-stars"></i></span><span class="dash-nav__label">Recommendations</span><span class="dash-nav__badge dash-nav__badge--accent">12</span></a>
+
+      <p class="dash-nav__heading">Explore</p>
+      <a href="explore.html" class="dash-nav__item"><span class="dash-nav__icon"><i class="bi bi-compass"></i></span><span class="dash-nav__label">Explore Careers</span></a>
+      <a href="saved.html" class="dash-nav__item"><span class="dash-nav__icon"><i class="bi bi-bookmark"></i></span><span class="dash-nav__label">Saved Careers</span></a>
+      <a href="roadmap.html" class="dash-nav__item"><span class="dash-nav__icon"><i class="bi bi-signpost-split"></i></span><span class="dash-nav__label">Learning Roadmap</span></a>
+      <a href="resources.html" class="dash-nav__item"><span class="dash-nav__icon"><i class="bi bi-collection-play"></i></span><span class="dash-nav__label">Resources</span></a>
+
+      <p class="dash-nav__heading">Account</p>
+      <a href="settings.html" class="dash-nav__item is-active"><span class="dash-nav__icon"><i class="bi bi-gear"></i></span><span class="dash-nav__label">Settings</span></a>
+      <a href="login.html" class="dash-nav__item dash-nav__item--danger"><span class="dash-nav__icon"><i class="bi bi-box-arrow-right"></i></span><span class="dash-nav__label">Logout</span></a>
+    </nav>
+
+    <div class="dash-sidebar__promo">
+      <div class="dash-sidebar__promo-icon"><i class="bi bi-rocket-takeoff"></i></div>
+      <p class="dash-sidebar__promo-title">Unlock Premium</p>
+      <p class="dash-sidebar__promo-text">Mentor sessions, certifications &amp; more.</p>
+      <button class="eg-btn eg-btn--light eg-btn--sm eg-btn--block" data-eg-toast="Premium upgrade coming soon ✨">Upgrade</button>
+    </div>
+
+    <div class="dash-user">
+      <span class="dash-avatar dash-avatar--lg" style="--c:#7B5CFF">AS</span>
+      <div class="dash-user__info">
+        <span class="dash-user__name">Abdulsamad Suleiman</span>
+        <span class="dash-user__role">Undergraduate · 400L</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dash-main">
+
+    <header class="dash-topbar">
+      <div class="dash-topbar__left">
+        <button class="dash-topbar__menu" id="sidebarToggle" aria-label="Open menu" aria-controls="dashSidebar" aria-expanded="false"><i class="bi bi-list"></i></button>
+        <div class="dash-topbar__search">
+          <i class="bi bi-search"></i>
+          <input type="search" id="topSearch" placeholder="Search careers, skills, resources…" aria-label="Search" />
+          <kbd class="dash-topbar__kbd">⌘K</kbd>
+        </div>
+      </div>
+      <div class="dash-topbar__right">
+        <button class="dash-topbar__icon-btn d-none d-sm-flex" data-eg-toast="You're all caught up on messages ✉️" aria-label="Messages"><i class="bi bi-chat-dots"></i></button>
+        <div class="dash-dropdown" data-eg-dd>
+          <button class="dash-topbar__icon-btn dash-topbar__icon-btn--notify" data-eg-dd-toggle aria-label="Notifications"><i class="bi bi-bell"></i><span class="dash-topbar__dot"></span></button>
+          <div class="dash-dropdown__menu dash-dropdown__menu--wide">
+            <div class="dash-dropdown__head"><strong>Notifications</strong><button class="dash-dropdown__mark" data-eg-toast="Marked all as read">Mark all read</button></div>
+            <a href="#" class="dash-dropdown__footer">View all notifications</a>
+          </div>
+        </div>
+        <div class="dash-dropdown" data-eg-dd>
+          <button class="dash-topbar__profile" data-eg-dd-toggle aria-label="Profile menu">
+            <span class="dash-avatar" style="--c:#7B5CFF">AO</span>
+            <span class="dash-topbar__profile-name d-none d-md-inline">Amara O.</span>
+            <i class="bi bi-chevron-down d-none d-md-inline"></i>
+          </button>
+          <div class="dash-dropdown__menu">
+            <div class="dash-dropdown__head dash-dropdown__head--profile">
+              <span class="dash-avatar dash-avatar--lg" style="--c:#7B5CFF">AO</span>
+              <div><p class="dash-dropdown__name">Amara Okafor</p><p class="dash-dropdown__email">amara@school.edu</p></div>
+            </div>
+            <a href="profile.html" class="dash-dropdown__item"><i class="bi bi-person"></i> My Profile</a>
+            <a href="settings.html" class="dash-dropdown__item"><i class="bi bi-gear"></i> Settings</a>
+            <a href="saved.html" class="dash-dropdown__item"><i class="bi bi-bookmark"></i> Saved Careers</a>
+            <div class="dash-dropdown__sep"></div>
+            <a href="login.html" class="dash-dropdown__item dash-dropdown__item--danger"><i class="bi bi-box-arrow-right"></i> Sign Out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-content" id="settingsContent">
+
+      <header class="pe-page-head reveal">
+        <div>
+          <span class="pe-page-head__eyebrow"><i class="bi bi-gear"></i> Account</span>
+          <h1 class="pe-page-head__title">Settings</h1>
+          <p class="pe-page-head__lead">
+            Manage your account preferences, notifications, privacy and security.
+          </p>
+        </div>
+      </header>
+
+      <!-- ACCOUNT -->
+      <section class="set-section reveal">
+        <div class="set-section__head">
+          <div class="set-section__icon set-section__icon--purple"><i class="bi bi-person-circle"></i></div>
+          <div>
+            <h2 class="set-section__title">Account</h2>
+            <p class="set-section__desc">Your account information</p>
+          </div>
+        </div>
+        <div class="set-card">
+          <div class="set-row">
+            <div class="set-row__label">Name</div>
+            <div class="set-row__value">Abdulsamad Suleiman</div>
+            <a href="profile.html" class="set-row__action">Edit</a>
+          </div>
+          <div class="set-row">
+            <div class="set-row__label">Email</div>
+            <div class="set-row__value">
+              abdulsamad@school.edu
+              <span class="set-badge set-badge--verified"><i class="bi bi-patch-check-fill"></i> Verified</span>
+            </div>
+            <a href="profile.html" class="set-row__action">Change</a>
+          </div>
+          <div class="set-row">
+            <div class="set-row__label">Educational level</div>
+            <div class="set-row__value">Undergraduate · 400L</div>
+            <a href="profile.html" class="set-row__action">Edit</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOTIFICATIONS -->
+      <section class="set-section reveal">
+        <div class="set-section__head">
+          <div class="set-section__icon set-section__icon--sky"><i class="bi bi-bell"></i></div>
+          <div>
+            <h2 class="set-section__title">Notifications</h2>
+            <p class="set-section__desc">Choose what you'd like to be notified about</p>
+          </div>
+        </div>
+        <div class="set-card">
+          <div class="set-toggle-row">
+            <div>
+              <p class="set-toggle-row__title">Career match alerts</p>
+              <p class="set-toggle-row__desc">Get notified when new careers match your profile</p>
+            </div>
+            <label class="eg-switch">
+              <input type="checkbox" checked data-notif="match" />
+              <span class="eg-switch__track"><span class="eg-switch__thumb"></span></span>
+            </label>
+          </div>
+          <div class="set-toggle-row">
+            <div>
+              <p class="set-toggle-row__title">Roadmap progress reminders</p>
+              <p class="set-toggle-row__desc">A weekly nudge to keep your learning going</p>
+            </div>
+            <label class="eg-switch">
+              <input type="checkbox" checked data-notif="roadmap" />
+              <span class="eg-switch__track"><span class="eg-switch__thumb"></span></span>
+            </label>
+          </div>
+          <div class="set-toggle-row">
+            <div>
+              <p class="set-toggle-row__title">New resources &amp; courses</p>
+              <p class="set-toggle-row__desc">Be first to know about new learning material</p>
+            </div>
+            <label class="eg-switch">
+              <input type="checkbox" checked data-notif="resources" />
+              <span class="eg-switch__track"><span class="eg-switch__thumb"></span></span>
+            </label>
+          </div>
+          <div class="set-toggle-row">
+            <div>
+              <p class="set-toggle-row__title">Product updates</p>
+              <p class="set-toggle-row__desc">Occasional news about new EduGuide AI features</p>
+            </div>
+            <label class="eg-switch">
+              <input type="checkbox" data-notif="product" />
+              <span class="eg-switch__track"><span class="eg-switch__thumb"></span></span>
+            </label>
+          </div>
+          <div class="set-toggle-row">
+            <div>
+              <p class="set-toggle-row__title">Marketing emails</p>
+              <p class="set-toggle-row__desc">Special offers and partner promotions</p>
+            </div>
+            <label class="eg-switch">
+              <input type="checkbox" data-notif="marketing" />
+              <span class="eg-switch__track"><span class="eg-switch__thumb"></span></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- PREFERENCES -->
+      <section class="set-section reveal">
+        <div class="set-section__head">
+          <div class="set-section__icon set-section__icon--success"><i class="bi bi-sliders"></i></div>
+          <div>
+            <h2 class="set-section__title">Preferences</h2>
+            <p class="set-section__desc">Personalise how EduGuide AI looks and behaves for you</p>
+          </div>
+        </div>
+        <div class="set-card">
+          <div class="set-row set-row--stack">
+            <div class="set-row__label">Language</div>
+            <select class="eg-select set-row__select" data-pref="language">
+              <option value="en" selected>English (UK)</option>
+              <option value="en-us">English (US)</option>
+              <option value="fr">Français</option>
+              <option value="sw">Kiswahili</option>
+              <option value="yo">Yorùbá</option>
+            </select>
+          </div>
+          <div class="set-row set-row--stack">
+            <div class="set-row__label">Time zone</div>
+            <select class="eg-select set-row__select" data-pref="timezone">
+              <option value="wat" selected>West Africa Time (WAT, UTC+1)</option>
+              <option value="eat">East Africa Time (EAT, UTC+3)</option>
+              <option value="sast">South Africa (SAST, UTC+2)</option>
+              <option value="gmt">GMT (UTC+0)</option>
+            </select>
+          </div>
+          <div class="set-row set-row--stack">
+            <div class="set-row__label">Weekly digest day</div>
+            <select class="eg-select set-row__select" data-pref="digest-day">
+              <option value="mon">Monday</option>
+              <option value="wed">Wednesday</option>
+              <option value="fri" selected>Friday</option>
+              <option value="sun">Sunday</option>
+            </select>
+          </div>
+          <div class="set-row set-row--stack">
+            <div class="set-row__label">Appearance</div>
+            <div class="set-theme-toggle" role="group" aria-label="Theme">
+              <button class="set-theme-btn is-active" data-theme="light"><i class="bi bi-sun"></i> Light</button>
+              <button class="set-theme-btn" data-theme="system"><i class="bi bi-circle-half"></i> System</button>
+              <button class="set-theme-btn" data-theme="dark"><i class="bi bi-moon-stars"></i> Dark</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIVACY -->
+      <section class="set-section reveal">
+        <div class="set-section__head">
+          <div class="set-section__icon set-section__icon--warning"><i class="bi bi-shield-lock"></i></div>
+          <div>
+            <h2 class="set-section__title">Privacy &amp; data</h2>
+            <p class="set-section__desc">Control how your data is used</p>
+          </div>
+        </div>
+        <div class="set-card">
+          <div class="set-toggle-row">
+            <div>
+              <p class="set-toggle-row__title">Personalised recommendations</p>
+              <p class="set-toggle-row__desc">Use my assessment answers to improve career matches</p>
+            </div>
+            <label class="eg-switch">
+              <input type="checkbox" checked data-privacy="personalised" />
+              <span class="eg-switch__track"><span class="eg-switch__thumb"></span></span>
+            </label>
+          </div>
+          <div class="set-toggle-row">
+            <div>
+              <p class="set-toggle-row__title">Anonymous analytics</p>
+              <p class="set-toggle-row__desc">Help us improve EduGuide AI with anonymous usage data</p>
+            </div>
+            <label class="eg-switch">
+              <input type="checkbox" checked data-privacy="analytics" />
+              <span class="eg-switch__track"><span class="eg-switch__thumb"></span></span>
+            </label>
+          </div>
+          <div class="set-row set-row--action">
+            <div>
+              <p class="set-toggle-row__title">Download my data</p>
+              <p class="set-toggle-row__desc">Get a copy of all your EduGuide AI data</p>
+            </div>
+            <button class="eg-btn eg-btn--outline eg-btn--sm" data-eg-toast="Data export requested — we'll email you shortly 📥">
+              <i class="bi bi-download"></i> Request
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECURITY -->
+      <section class="set-section reveal">
+        <div class="set-section__head">
+          <div class="set-section__icon set-section__icon--danger"><i class="bi bi-shield-check"></i></div>
+          <div>
+            <h2 class="set-section__title">Security</h2>
+            <p class="set-section__desc">Keep your account protected</p>
+          </div>
+        </div>
+        <div class="set-card">
+          <div class="set-row set-row--action">
+            <div>
+              <p class="set-toggle-row__title">Password</p>
+              <p class="set-toggle-row__desc">Last changed 3 months ago</p>
+            </div>
+            <button class="eg-btn eg-btn--outline eg-btn--sm" data-eg-toast="Password change flow coming soon 🔒">
+              <i class="bi bi-key"></i> Change
+            </button>
+          </div>
+          <div class="set-toggle-row">
+            <div>
+              <p class="set-toggle-row__title">Two-factor authentication</p>
+              <p class="set-toggle-row__desc">Add an extra layer of security with an authenticator app</p>
+            </div>
+            <label class="eg-switch">
+              <input type="checkbox" data-security="2fa" />
+              <span class="eg-switch__track"><span class="eg-switch__thumb"></span></span>
+            </label>
+          </div>
+          <div class="set-row set-row--action">
+            <div>
+              <p class="set-toggle-row__title">Active sessions</p>
+              <p class="set-toggle-row__desc">2 devices signed in · Lagos, Nigeria &amp; London, UK</p>
+            </div>
+            <button class="eg-btn eg-btn--outline eg-btn--sm" data-eg-toast="Signing out all other devices…">
+              <i class="bi bi-box-arrow-right"></i> Sign out all
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- DANGER ZONE -->
+      <section class="set-section set-section--danger reveal">
+        <div class="set-section__head">
+          <div class="set-section__icon set-section__icon--danger"><i class="bi bi-exclamation-triangle"></i></div>
+          <div>
+            <h2 class="set-section__title">Danger zone</h2>
+            <p class="set-section__desc">Permanent, irreversible actions</p>
+          </div>
+        </div>
+        <div class="set-card set-card--danger">
+          <div class="set-row set-row--action">
+            <div>
+              <p class="set-toggle-row__title">Delete account</p>
+              <p class="set-toggle-row__desc">
+                This will permanently delete your account, saved careers, roadmaps and progress.
+                This cannot be undone.
+              </p>
+            </div>
+            <button class="eg-btn eg-btn--danger eg-btn--sm" id="deleteAccountBtn">
+              <i class="bi bi-trash3"></i> Delete account
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <p class="dash-footer-note">© 2025 EduGuide AI · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Help Centre</a></p>
+
+    </main>
+  </div>
+</div>
+
+<!-- DELETE ACCOUNT MODAL -->
+<div class="eg-modal" id="deleteModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="deleteTitle">
+  <div class="eg-modal__backdrop" data-eg-modal-close></div>
+  <div class="eg-modal__dialog eg-modal__dialog--center">
+    <div class="eg-modal__body text-center">
+      <div class="set-danger-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+      <h3 class="set-danger-title" id="deleteTitle">Delete your account?</h3>
+      <p class="set-danger-text">
+        This will permanently remove your profile, saved careers, roadmap progress and
+        achievements. There is no undo.
+      </p>
+      <div class="set-danger-actions">
+        <button class="eg-btn eg-btn--ghost" data-eg-modal-close>Keep my account</button>
+        <button class="eg-btn eg-btn--danger" id="confirmDeleteBtn">
+          <i class="bi bi-trash3"></i> Delete permanently
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="eg-toasts" id="egToasts" aria-live="polite" aria-atomic="true"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/dashboard-shell.js"></script>
+<script src="assets/js/settings.js"></script>
+</body>
+</html>

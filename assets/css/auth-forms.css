@@ -1,0 +1,209 @@
+/* ============================================================
+   EduGuide AI — Login & Forgot Password Extras (Phase 4)
+   Depends on Phase 3: auth.css
+   ============================================================ */
+
+/* ============================================================
+   SOCIAL LOGIN
+   ============================================================ */
+.auth-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.auth-social__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 52px;
+  background: #fff;
+  border: 1px solid var(--eg-border);
+  border-radius: var(--eg-radius-md);
+  font-family: var(--eg-font-body);
+  font-weight: 500;
+  font-size: .95rem;
+  color: var(--eg-text);
+  cursor: pointer;
+  transition: background var(--eg-dur-2) var(--eg-ease-out),
+              border-color var(--eg-dur-2) var(--eg-ease-out),
+              transform var(--eg-dur-2) var(--eg-ease-out),
+              box-shadow var(--eg-dur-2) var(--eg-ease-out);
+}
+.auth-social__btn:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+  transform: translateY(-1px);
+  box-shadow: var(--eg-shadow-sm);
+}
+.auth-social__btn:active {
+  transform: translateY(0);
+}
+.auth-google-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 22px 0;
+  color: var(--eg-text-muted);
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--eg-border);
+}
+
+/* ============================================================
+   REMEMBER / FORGOT ROW
+   ============================================================ */
+.auth-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0 24px;
+  flex-wrap: wrap;
+}
+.auth-options .eg-check span { font-size: .88rem; }
+.auth-link--sm {
+  font-size: .88rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   BLOCK BUTTON
+   ============================================================ */
+.eg-btn--block {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ============================================================
+   SECURITY FOOTNOTE
+   ============================================================ */
+.auth-security {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 20px 0 0;
+  font-size: .82rem;
+  color: var(--eg-text-muted);
+}
+.auth-security i { color: var(--eg-primary-purple); }
+
+/* ============================================================
+   FORGOT PASSWORD SUCCESS STATE
+   ============================================================ */
+.auth-success {
+  text-align: center;
+  padding: 12px 0 20px;
+  animation: authSuccessIn var(--eg-dur-4) var(--eg-ease-out);
+}
+@keyframes authSuccessIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.auth-success__icon {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  margin: 12px auto 24px;
+  animation: egSuccessPop .6s var(--eg-ease-spring);
+}
+@keyframes egSuccessPop {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.auth-success__title {
+  font-family: var(--eg-font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--eg-primary-navy);
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+.auth-success__text {
+  font-size: .95rem;
+  line-height: 1.7;
+  color: var(--eg-text-muted);
+  margin: 0 auto 28px;
+  max-width: 400px;
+}
+.auth-success__text strong {
+  color: var(--eg-primary-navy);
+  word-break: break-word;
+}
+.auth-success__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 340px;
+  margin: 0 auto;
+}
+.auth-success__actions .eg-btn { justify-content: center; }
+.auth-success__resend {
+  font-size: .85rem;
+  color: var(--eg-text-muted);
+  margin: 22px 0 0;
+}
+.auth-success__resend a {
+  color: var(--eg-primary-purple);
+  font-weight: 600;
+  text-decoration: none;
+}
+.auth-success__resend a:hover { text-decoration: underline; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 575.98px) {
+  .auth-options {
+    gap: 8px;
+  }
+  .auth-success__icon {
+    width: 72px;
+    height: 72px;
+    font-size: 2.1rem;
+  }
+  .auth-success__title { font-size: 1.3rem; }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .auth-success,
+  .auth-success__icon {
+    animation: none !important;
+  }
+  .auth-social__btn:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,119 @@
+/* ============================================================
+   EduGuide AI — Motion Primitives (Phase 1)
+   Reusable keyframes and animation utility classes.
+   ============================================================ */
+
+/* ---------- Keyframes ---------- */
+@keyframes egFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes egPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: .75; transform: scale(1.05); }
+}
+
+@keyframes egSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes egShimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes egSparkle {
+  0%, 100% { opacity: .2; transform: scale(.8); }
+  50%      { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes egFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes egSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes egSlideDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes egScaleIn {
+  from { opacity: 0; transform: scale(.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes egRipple {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* ---------- Utility classes ---------- */
+.eg-anim-float { animation: egFloat 5s ease-in-out infinite; }
+.eg-anim-pulse { animation: egPulse 2.4s ease-in-out infinite; }
+.eg-anim-spin  { animation: egSpin 1.6s linear infinite; }
+.eg-anim-sparkle { animation: egSparkle 3s ease-in-out infinite; }
+
+.eg-fade-in    { animation: egFadeIn var(--eg-dur-4) var(--eg-ease-out) both; }
+.eg-slide-up   { animation: egSlideUp var(--eg-dur-4) var(--eg-ease-out) both; }
+.eg-slide-down { animation: egSlideDown var(--eg-dur-4) var(--eg-ease-out) both; }
+.eg-scale-in   { animation: egScaleIn var(--eg-dur-4) var(--eg-ease-spring) both; }
+
+/* ---------- Spinner ---------- */
+.eg-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: egSpin .7s linear infinite;
+  vertical-align: middle;
+}
+
+/* ---------- Skeleton shimmer ---------- */
+.eg-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--eg-bg-muted) 25%,
+    #EDEFF4 50%,
+    var(--eg-bg-muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: egShimmer 1.4s linear infinite;
+  border-radius: var(--eg-radius-sm);
+}
+
+/* ---------- Ripple (used on .eg-btn) ---------- */
+.eg-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .5);
+  transform: scale(0);
+  animation: egRipple .6s ease-out forwards;
+  pointer-events: none;
+}
+
+/* ---------- Reduced motion override ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .eg-anim-float,
+  .eg-anim-pulse,
+  .eg-anim-spin,
+  .eg-anim-sparkle,
+  .eg-fade-in,
+  .eg-slide-up,
+  .eg-slide-down,
+  .eg-scale-in,
+  .eg-skeleton {
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

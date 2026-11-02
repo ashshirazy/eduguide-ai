@@ -1,0 +1,104 @@
+/* ============================================================
+   EduGuide AI — Design Tokens (Phase 1)
+   Single source of truth. Every other stylesheet consumes these.
+   Never hard-code a colour, radius, shadow or duration.
+   ============================================================ */
+
+:root {
+  /* ---------- BRAND COLOURS ---------- */
+  --eg-primary-navy:      #0A1B3D;
+  --eg-primary-navy-600:  #143063;
+  --eg-primary-purple:    #6C4CF1;
+  --eg-primary-purple-500:#7B5CFF;
+  --eg-primary-sky:       #2EA8FF;
+  --eg-primary-sky-400:   #38BDF8;
+
+  /* ---------- STATUS ---------- */
+  --eg-success: #10B981;
+  --eg-warning: #F59E0B;
+  --eg-danger:  #EF4444;
+  --eg-info:    #0284C7;
+
+  /* ---------- NEUTRALS ---------- */
+  --eg-bg-page:   #FFFFFF;
+  --eg-bg-muted:  #F5F7FB;
+  --eg-bg-soft:   #F7F9FC;
+  --eg-border:    #E5E9F0;
+  --eg-border-2:  #E2E8F0;
+  --eg-text:      #1E293B;
+  --eg-text-muted:#64748B;
+  --eg-text-soft: #94A3B8;
+
+  /* ---------- SURFACES ---------- */
+  --eg-surface:       #FFFFFF;
+  --eg-surface-alt:   #FAFBFD;
+
+  /* ---------- SEMANTIC ALIASES ---------- */
+  --eg-primary: var(--eg-primary-purple);
+  --eg-primary-hover: #5B3EDF;
+
+  /* ---------- GRADIENTS ---------- */
+  --eg-gradient-brand: linear-gradient(135deg, #6C4CF1 0%, #2EA8FF 100%);
+  --eg-gradient-navy:  linear-gradient(155deg, #0A1B3D 0%, #1C2E5C 55%, #2A3B7C 100%);
+  --eg-gradient-soft:  linear-gradient(135deg, #EDE8FF 0%, #E0F2FE 100%);
+
+  /* ---------- TYPE ---------- */
+  --eg-font-display: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --eg-font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --eg-fs-xs:  0.75rem;
+  --eg-fs-sm:  0.875rem;
+  --eg-fs-base:1rem;
+  --eg-fs-lg:  1.125rem;
+  --eg-fs-xl:  1.25rem;
+  --eg-fs-2xl: 1.5rem;
+  --eg-fs-3xl: 1.875rem;
+  --eg-fs-4xl: 2.25rem;
+
+  /* ---------- SPACING (4px grid) ---------- */
+  --eg-sp-1:  4px;
+  --eg-sp-2:  8px;
+  --eg-sp-3:  12px;
+  --eg-sp-4:  16px;
+  --eg-sp-5:  20px;
+  --eg-sp-6:  24px;
+  --eg-sp-8:  32px;
+  --eg-sp-10: 40px;
+  --eg-sp-12: 48px;
+  --eg-sp-16: 64px;
+
+  /* ---------- RADII ---------- */
+  --eg-radius-xs: 4px;
+  --eg-radius-sm: 6px;
+  --eg-radius-md: 10px;
+  --eg-radius-lg: 14px;
+  --eg-radius-xl: 18px;
+  --eg-radius-full: 999px;
+
+  /* ---------- SHADOWS ---------- */
+  --eg-shadow-xs: 0 1px 2px rgba(10, 27, 61, .05);
+  --eg-shadow-sm: 0 2px 6px rgba(10, 27, 61, .06);
+  --eg-shadow-md: 0 6px 16px rgba(10, 27, 61, .08);
+  --eg-shadow-lg: 0 12px 28px rgba(10, 27, 61, .10);
+  --eg-shadow-xl: 0 24px 48px rgba(10, 27, 61, .16);
+
+  /* ---------- MOTION ---------- */
+  --eg-dur-1: 120ms;
+  --eg-dur-2: 200ms;
+  --eg-dur-3: 320ms;
+  --eg-dur-4: 500ms;
+  --eg-dur-5: 800ms;
+
+  --eg-ease-out:    cubic-bezier(.22, 1, .36, 1);
+  --eg-ease-in:     cubic-bezier(.55, 0, 1, .45);
+  --eg-ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+
+  /* ---------- LAYOUT ---------- */
+  --eg-container: 1200px;
+  --eg-navbar-h:  76px;
+  --eg-topbar-h:  68px;
+  --eg-sidebar-w: 264px;
+  --eg-z-dropdown: 50;
+  --eg-z-modal:   1000;
+  --eg-z-toast:   1100;
+}
